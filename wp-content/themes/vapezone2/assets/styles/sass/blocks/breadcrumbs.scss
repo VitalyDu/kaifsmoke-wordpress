@@ -1,0 +1,38 @@
+@use 'sass:math';
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: $colorDark;
+            &::after {
+                content: "/";
+                margin: 0px 3px;
+            }
+            &:last-of-type {
+                &::after {
+                    display: none;
+                }
+            }
+            a {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+                color: $colorDark;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+# ignore everything in the root except the "wp-content" directory.
+!wp-content/
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+wp-includes/*
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+
+wp-content/themes/vapezone/node_modules/
+wp-content/themes/vapezone/.bowerrc
+wp-content/themes/vapezone/.nvmrc
+
+# ignore these plugins
+wp-content/plugins/hello.php
+
+# ignore specific themes
+wp-content/themes/twenty*/
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+*.zip
+*.txt
+*.html
+.htaccess
+git update-index --skip-worktree -- wp-config.php
+git update-index --skip-worktree -- wp-config-sample.php
+devfix.php
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-config.php
+wp-links-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+wp-content/plugins/woocommerce-synchronization-1c/files/

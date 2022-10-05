@@ -1,0 +1,297 @@
+.accManagePage__title {
+  padding: 30px 0px;
+}
+
+.accManagePage {
+  padding: 0px 0px 184px 0px;
+  .container {
+    .accManagePage_block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      background: $colorLight;
+      box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+      padding: 30px;
+      .accManagePage_block__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .accManagePage_top__left {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          .accManagePage_top__userImg {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: contain;
+            }
+          }
+          .accManagePage_top__userNameHaveBonuses {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            h3.accManagePage_top__userName {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 24px;
+              line-height: 29px;
+              color: $colorDark;
+            }
+            .accManagePage_top__haveBonuses {
+              // margin-top: 5px;
+              position: relative;
+              span.accManagePage_haveBonuses__value {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                text-decoration-line: underline;
+                color: $colorGrey;
+                cursor: pointer;
+                padding: 5px 0px;
+              }
+              .hiddenMessageBonuses {
+                display: none;
+                width: 446px;
+                box-sizing: border-box;
+                border-radius: 25px;
+                border-bottom-left-radius: 0px;
+                padding: 16px 30px;
+                position: absolute;
+                bottom: 110%;
+                left: 100%;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                color: $colorDark;
+                background: #d6d6d6;
+                &::before {
+                  content: " ";
+                  transform: rotate(45deg);
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  left: -10px;
+                  bottom: -10px;
+                  border-left: 10px solid transparent;
+                  border-right: 10px solid transparent;
+                  border-top: 20px solid #d6d6d6;
+                }
+              }
+            }
+          }
+        }
+        // .accManagePage_top__right {
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: flex-start;
+        //     align-items: center;
+        //     max-width: 400px;
+        //     width: 100%;
+        //     a.accManagePage_top__editProfile {
+        //         display: flex;
+        //         justify-content: center;
+        //         align-items: center;
+        //         margin-right: 30px;
+        //         // width: 100%;
+        //         span {
+        //             font-style: normal;
+        //             font-weight: 500;
+        //             font-size: 12px;
+        //             line-height: 15px;
+        //             color: $colorGrey;
+        //         }
+        //         svg {
+        //             margin-left: 5px;
+        //         }
+        //     }
+        //     a.accManagePage_top__logout {
+        //         border: 1px solid $colorGrey;
+        //         box-sizing: border-box;
+        //         border-radius: 5px;
+        //         max-width: 170px;
+        //         width: 100%;
+        //         padding: 12px 24px;
+        //         font-style: normal;
+        //         font-weight: 500;
+        //         font-size: 14px;
+        //         line-height: 17px;
+        //         text-align: center;
+        //         color: $colorDark;
+        //     }
+        // }
+      }
+      .accManagePage_block__information {
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .information_buttons {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+          margin-top: 40px;
+          .editProfile {
+            border: none;
+            outline: none;
+            background: none;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            .label {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 15px;
+              color: $colorGrey;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+      .accManagePage_block__editInformation {
+        width: 100%;
+        margin-top: 40px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .editInformation_names {
+          width: 100%;
+        }
+        .editInformation_otherInf {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          width: 100%;
+          .editInformation_otherInf__title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: $colorDark;
+            margin-bottom: 23px;
+          }
+          .dateField{
+            @media (max-width: 768px){
+              order: 2;
+            }
+          }
+        }
+        .editInformation_passwords {
+          margin-top: 40px;
+          width: 100%;
+        }
+      }
+      .editInformation_buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 50px;
+      }
+      .fields {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 13px;
+        width: 100%;
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1169px) {
+  .accManagePage__title {
+    padding: 30px 0px;
+  }
+
+  .accManagePage {
+    padding: 0px 0px 80px 0px;
+    .container {
+      .accManagePage_block {
+        box-shadow: none;
+        padding: 0px;
+        .accManagePage_block__top {
+          .accManagePage_top__left {
+            .accManagePage_top__userImg {
+              width: 40px;
+              height: 40px;
+              margin-right: 15px;
+              img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+              }
+            }
+            .accManagePage_top__userNameHaveBonuses {
+              h3.accManagePage_top__userName {
+                font-size: 20px;
+                line-height: 24px;
+              }
+              .accManagePage_top__haveBonuses {
+                span.accManagePage_haveBonuses__value {
+                  font-size: 12px;
+                  line-height: 15px;
+                }
+                .hiddenMessageBonuses {
+                  display: none;
+                  width: 179px;
+                  box-sizing: border-box;
+                  border-radius: 25px;
+                  border-bottom-left-radius: 0px;
+                  padding: 10px 15px;
+                  position: absolute;
+                  bottom: 110%;
+                  left: 60%;
+                  font-size: 10px;
+                  line-height: 12px;
+                  &::before {
+                    content: " ";
+                    transform: rotate(45deg);
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    left: -10px;
+                    bottom: -10px;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 20px solid #d6d6d6;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

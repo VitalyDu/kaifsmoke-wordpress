@@ -1,0 +1,259 @@
+.answerPage {
+    margin: 30px 0px;
+    .container {
+        .answerPage_block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            h1 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 44px;
+                text-align: center;
+                color: $colorGrey;
+            }
+            span {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+                color: $colorDark;
+                margin-top: 10px;
+                a {
+                    text-decoration: underline;
+                }
+            }
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                margin-top: 50px;
+            }
+            a.onHomePage {
+                background: $colorPrimary;
+                border-radius: 5px;
+                max-width: 270px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 22px 42px;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+                color: $colorLight;
+                margin-top: 50px;
+            }
+            .answerPage_block__links {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin-top: 50px;
+                .answerPage_links__firstLink {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 270px;
+                    width: 100%;
+                    border: 1px solid $colorGrey;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: $colorDark;
+                    padding: 22px 44px;
+                    margin-right: 30px;
+                }
+                .answerPage_links__secondLink {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 270px;
+                    width: 100%;
+                    border: 1px solid $colorPrimary;
+                    background: $colorPrimary;
+                    border-radius: 5px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: $colorLight;
+                    padding: 22px 10px;
+                }
+            }
+            &.pageNotFound {
+                img {
+                    margin-top: 100px;
+                }
+                a.onHomePage {
+                    margin-top: 100px;
+                }
+            }
+        }
+    }
+    &.notHaveBlock {
+        margin: 30px 0px;
+        .container {
+            .answerPage_block {
+                min-height: 65vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 1169px) {
+    .answerPage {
+        margin: 30px 0px;
+        .container {
+            .answerPage_block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 80vh;
+                width: 100%;
+                h1 {
+                    font-size: 26px;
+                    line-height: 32px;
+                }
+                span {
+                    font-size: 12px;
+                    line-height: 15px;
+                    a {
+                        text-decoration: underline;
+                    }
+                }
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    margin-top: 100px;
+                }
+                a.onHomePage {
+                    max-width: 100%;
+                    width: 100%;
+                    margin-top: 100px;
+                }
+                .answerPage_block__links {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 100px;
+                    .answerPage_links__firstLink {
+                        max-width: 100%;
+                        width: 100%;
+                        padding: 22px 5px;
+                        margin-right: 0px;
+                        margin-bottom: 20px;
+                    }
+                    .answerPage_links__secondLink {
+                        max-width: 100%;
+                        width: 100%;
+                        padding: 22px 5px;
+                    }
+                }
+                &.pageNotFound {
+                    img {
+                        margin-top: 100px;
+                    }
+                    a.onHomePage {
+                        margin-top: 100px;
+                    }
+                }
+            }
+        }
+        &.notHaveBlock {
+            margin: 30px 0px;
+            .container {
+                .answerPage_block {
+                    min-height: 65vh;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 374px){
+    .answerPage {
+        margin: 15px 0px;
+        .container {
+            .answerPage_block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 80vh;
+                width: 100%;
+                h1 {
+                    font-size: 26px;
+                    line-height: 32px;
+                }
+                span {
+                    font-size: 12px;
+                    line-height: 15px;
+                    a {
+                        text-decoration: underline;
+                    }
+                }
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    margin-top: 50px;
+                }
+                a.onHomePage {
+                    max-width: 100%;
+                    width: 100%;
+                    margin-top: 50px;
+                }
+                .answerPage_block__links {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 50px;
+                    .answerPage_links__firstLink {
+                        max-width: 100%;
+                        width: 100%;
+                        padding: 22px 5px;
+                        margin-right: 0px;
+                        margin-bottom: 10px;
+                    }
+                    .answerPage_links__secondLink {
+                        max-width: 100%;
+                        width: 100%;
+                        padding: 22px 5px;
+                    }
+                }
+                &.pageNotFound {
+                    img {
+                        margin-top: 50px;
+                    }
+                    a.onHomePage {
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+        &.notHaveBlock {
+            margin: 30px 0px;
+            .container {
+                .answerPage_block {
+                    min-height: 65vh;
+                }
+            }
+        }
+    }
+}

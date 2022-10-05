@@ -1,0 +1,198 @@
+.signInPage__title {
+  padding: 30px 0px 50px 0px;
+}
+
+.signInPage {
+  padding: 30px 0px 196px 0px;
+  .container {
+    .signInPage_block {
+      background: $colorLight;
+      box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      padding: 30px 0px 50px 0px;
+      width: 100%;
+      .signInPage_block__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 540px;
+        width: 100%;
+        .field {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-top: 13px;
+          width: 100%;
+          position: relative;
+          a.forgotPassword {
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: $colorDark;
+          }
+          label {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 12px;
+            color: $colorGrey;
+            margin-bottom: 5px;
+          }
+          input {
+            width: 100%;
+            border: 1px solid $colorGrey;
+            box-sizing: border-box;
+            border-radius: 5px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: $colorDark;
+            padding: 11px 20px;
+            &::placeholder {
+              color: $colorDark;
+            }
+          }
+        }
+        .signInPage_form__signInSignUp {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+          width: 100%;
+          margin-top: 50px;
+          .signInPage_form__signIn {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            max-width: 170px;
+            width: 100%;
+            .signIn_btn {
+              cursor: pointer;
+              border: none;
+              outline: none;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              width: 100%;
+              padding: 21px 42px;
+              background: $colorPrimary;
+              border-radius: 5px;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 17px;
+              text-align: center;
+              color: $colorLight;
+            }
+          }
+        }
+        .signInPage_form__signUp {
+          margin-left: 57px;
+          a {
+            border: none;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 170px;
+            width: 100%;
+            padding: 21px 10px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: $colorDark;
+          }
+        }
+        .signIn_errors {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+          margin: 20px 0px;
+          display: none;
+          p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            width: 100%;
+            text-align: center;
+            color: $colorError;
+            padding: 5px 0px;
+            border-top: 1px solid #e9400d18;
+            &:first-of-type {
+              margin-top: 0;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1169px) {
+  .signInPage__title {
+    padding: 30px 0px 50px 0px;
+  }
+  .signInAdvantages {
+    display: none;
+  }
+  .signInPage {
+    padding: 30px 0px 80px 0px;
+    .container {
+      .signInPage_block {
+        box-shadow: none;
+        padding: 0px;
+        width: 100%;
+        .signInPage_block__form {
+          .field {
+            a.forgotPassword {
+              bottom: 14px;
+              right: 15px;
+              font-size: 10px;
+              line-height: 12px;
+            }
+            label {
+            }
+            input {
+            }
+          }
+          .signInPage_form__signInSignUp {
+            width: 100%;
+            justify-content: space-between;
+            .signInPage_form__signIn {
+              max-width: 140px;
+              width: 100%;
+              .signIn_btn {
+                padding: 21px 21px;
+              }
+            }
+          }
+          .signInPage_form__signUp {
+            margin-left: 10px;
+            a {
+              max-width: 140px;
+              width: 100%;
+              padding: 21px 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
