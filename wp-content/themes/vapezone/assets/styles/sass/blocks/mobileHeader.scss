@@ -35,7 +35,7 @@
     .mobileHeader {
       display: flex;
       .mobileHeader_block {
-        padding: 15px 0px;
+        padding: 5px 0px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -46,6 +46,7 @@
           justify-content: center;
           align-items: center;
           width: 100%;
+          max-height: 35px;
           img {
             max-width: 100%;
             max-height: 100%;
@@ -68,8 +69,8 @@
             width: 100%;
             input {
               width: 100%;
-              background: $colorLight;
-              border: 1px solid $colorLight;
+              background: $colorDark;
+              border: 1px solid $colorDark;
               box-sizing: border-box;
               border-radius: 20px;
               padding: 6px 18px 7px 39px;
@@ -110,7 +111,7 @@
               font-weight: 500;
               font-size: 8px;
               line-height: 10px;
-              color: $colorLight;
+              color: $colorDark;
             }
             .burger_icon {
               display: flex;
@@ -123,7 +124,7 @@
               // padding: 8px 4px;
               span.burger-line {
                 width: 100%;
-                border-bottom: 1px solid $colorLight;
+                border-bottom: 1px solid $colorDark;
                 position: absolute;
                 &:first-of-type {
                   top: 0px;
@@ -319,7 +320,7 @@
         font-size: 14px;
         line-height: 17px;
         text-align: center;
-        color: $colorLight;
+        color: $colorDark;
         position: relative;
         &::before {
           content: "";
@@ -328,7 +329,7 @@
           left: 0px;
           width: 24px;
           height: 24px;
-          background: url("../images/icons/mobileMenuReturn.svg");
+          background: url("../images/leftArrowDark.svg");
           background-size: contain;
           background-position: center;
           background-repeat: no-repeat;
@@ -338,7 +339,7 @@
   }
   .mobileMenu {
     display: none;
-    background: $colorDark;
+    background: $colorLight;
     position: fixed;
     top: 107px;
     left: 0px;
@@ -388,7 +389,7 @@
             font-weight: 500;
             font-size: 12px;
             line-height: 15px;
-            color: #d6d6d6;
+            color: $colorDark;
           }
           ul {
             display: flex;
@@ -412,7 +413,7 @@
                 font-weight: normal;
                 font-size: 14px;
                 line-height: 17px;
-                color: $colorLight;
+                color: $colorDark;
               }
               &.mobileMenu_category.haveDropDown {
                 .dropdown_arrow {
@@ -436,7 +437,7 @@
                   left: 0px;
                   width: 100%;
                   height: 100%;
-                  background: $colorDark;
+                  background: $colorLight;
                   z-index: 9999;
                   .mobileMenu_block__return {
                     margin-bottom: 16px;
@@ -455,7 +456,7 @@
                           left: 0px;
                           width: 100%;
                           height: 100%;
-                          background: $colorDark;
+                          background: $colorLight;
                           z-index: 9999;
                         }
                         .dropdown_arrow {
@@ -491,7 +492,7 @@
             font-weight: 500;
             font-size: 12px;
             line-height: 15px;
-            color: #d6d6d6;
+            color: $colorDark;
           }
           ul {
             display: flex;
@@ -512,7 +513,7 @@
                 font-weight: normal;
                 font-size: 14px;
                 line-height: 17px;
-                color: $colorLight;
+                color: $colorDark;
               }
             }
           }
@@ -538,7 +539,7 @@
                   font-weight: normal;
                   font-size: 14px;
                   line-height: 17px;
-                  color: #d6d6d6;
+                  color: $colorDark;
                 }
               }
             }
@@ -548,7 +549,7 @@
                 font-weight: 500;
                 font-size: 14px;
                 line-height: 17px;
-                color: #d6d6d6;
+                color: $colorDark;
               }
             }
           }
@@ -563,7 +564,7 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    background: $colorDark;
+    background: $colorLight;
     z-index: 100;
     transform: translateX(100%);
     transition: 0.2s all linear;
@@ -608,7 +609,7 @@
               font-weight: 500;
               font-size: 20px;
               line-height: 24px;
-              color: $colorLight;
+              color: $colorDark;
               margin-bottom: 5px;
             }
             .userBonuses {
@@ -616,7 +617,7 @@
               font-weight: 500;
               font-size: 12px;
               line-height: 15px;
-              color: #d6d6d6;
+              color: $colorDark;
             }
           }
         }
@@ -636,7 +637,7 @@
               font-weight: normal;
               font-size: 14px;
               line-height: 17px;
-              color: $colorLight;
+              color: $colorDark;
             }
           }
         }
@@ -653,7 +654,7 @@
             max-width: 140px;
             width: 100%;
             padding: 11px 22px;
-            border: 1px solid $colorLight;
+            border: 1px solid $colorDark;
             box-sizing: border-box;
             border-radius: 5px;
             font-style: normal;
@@ -661,7 +662,7 @@
             font-size: 14px;
             line-height: 17px;
             text-align: center;
-            color: $colorLight;
+            color: $colorDark;
           }
         }
       }
@@ -674,7 +675,7 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    background: $colorDark;
+    background: $colorLight;
     z-index: 100;
     transform: translateX(100%);
     transition: 0.2s all linear;
@@ -704,7 +705,7 @@
             font-size: 20px;
             line-height: 24px;
             text-align: center;
-            color: $colorLight;
+            color: $colorDark;
           }
           .mobileMenuSignIn_form__fields {
             display: flex;
@@ -720,13 +721,13 @@
               font-weight: normal;
               font-size: 14px;
               line-height: 17px;
-              color: $colorLight;
-              border: 1px solid $colorLight;
+              color: $colorDark;
+              border: 1px solid $colorDark;
               box-sizing: border-box;
               border-radius: 5px;
               margin-bottom: 20px;
               &::placeholder {
-                color: $colorLight;
+                color: $colorDark;
               }
               &:last-of-type {
                 margin-bottom: 0;
@@ -758,7 +759,7 @@
                 font-size: 12px;
                 line-height: 15px;
                 text-align: center;
-                color: #d6d6d6;
+                color: $colorDark;
               }
             }
           }
@@ -790,7 +791,7 @@
                 font-size: 14px;
                 line-height: 17px;
                 text-align: center;
-                color: $colorLight;
+                color: $colorDark;
               }
             }
             .mobileMenuSignIn_buttons__right {
@@ -805,7 +806,7 @@
                 font-size: 14px;
                 line-height: 17px;
                 text-align: center;
-                color: $colorLight;
+                color: $colorDark;
               }
             }
           }
@@ -820,7 +821,7 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    background: $colorDark;
+    background: $colorLight;
     z-index: 100;
     transform: translateX(100%);
     transition: 0.2s all linear;
@@ -850,7 +851,7 @@
             font-size: 20px;
             line-height: 24px;
             text-align: center;
-            color: $colorLight;
+            color: $colorDark;
           }
           .mobileMenuForgotPassword_form__fields {
             display: flex;
@@ -866,13 +867,13 @@
               font-weight: normal;
               font-size: 14px;
               line-height: 17px;
-              color: $colorLight;
-              border: 1px solid $colorLight;
+              color: $colorDark;
+              border: 1px solid $colorDark;
               box-sizing: border-box;
               border-radius: 5px;
               margin-bottom: 20px;
               &::placeholder {
-                color: $colorLight;
+                color: $colorDark;
               }
               &:last-of-type {
                 margin-bottom: 0;
@@ -915,7 +916,7 @@
               font-size: 14px;
               line-height: 17px;
               text-align: center;
-              color: $colorLight;
+              color: $colorDark;
             }
           }
         }
@@ -929,7 +930,7 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    background: $colorDark;
+    background: $colorLight;
     z-index: 100;
     transform: translateX(100%);
     transition: 0.2s all linear;
@@ -965,7 +966,7 @@
             font-weight: normal;
             font-size: 10px;
             line-height: 12px;
-            color: #d6d6d6;
+            color: $colorDark;
             .mobileMenuFavorites_productsQuantity__value {
               margin-right: 5px;
             }
@@ -978,7 +979,7 @@
               font-weight: normal;
               font-size: 14px;
               line-height: 17px;
-              color: $colorLight;
+              color: $colorDark;
             }
           }
         }
@@ -1072,7 +1073,7 @@
                     font-weight: normal;
                     font-size: 14px;
                     line-height: 17px;
-                    color: $colorLight;
+                    color: $colorDark;
                   }
                 }
                 .product_nameQuantity__QuantityPrice {
@@ -1088,7 +1089,7 @@
                     font-weight: normal;
                     font-size: 12px;
                     line-height: 15px;
-                    color: #d6d6d6;
+                    color: $colorDark;
                     .value {
                       margin-right: 5px;
                     }
@@ -1117,7 +1118,7 @@
             font-size: 14px;
             line-height: 17px;
             text-align: center;
-            color: $colorLight;
+            color: $colorDark;
             background: $colorPrimary;
             border: 1px solid $colorPrimary;
             box-sizing: border-box;
@@ -1137,7 +1138,7 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 17px;
-            color: #fff;
+            color: $colorDark;
           }
         }
       }
@@ -1150,7 +1151,7 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    background: $colorDark;
+    background: $colorLight;
     z-index: 100;
     transform: translateX(100%);
     transition: 0.2s all linear;
@@ -1185,7 +1186,7 @@
             font-weight: normal;
             font-size: 10px;
             line-height: 12px;
-            color: #d6d6d6;
+            color: $colorDark;
             .mobileMenuBasket_productsQuantity__value {
               margin-right: 5px;
             }
@@ -1198,7 +1199,7 @@
               font-weight: normal;
               font-size: 14px;
               line-height: 17px;
-              color: $colorLight;
+              color: $colorDark;
             }
           }
         }
@@ -1291,7 +1292,7 @@
                     font-weight: normal;
                     font-size: 14px;
                     line-height: 17px;
-                    color: $colorLight;
+                    color: $colorDark;
                   }
                 }
                 .product_nameQuantity__QuantityPrice {
@@ -1307,7 +1308,7 @@
                     font-weight: normal;
                     font-size: 12px;
                     line-height: 15px;
-                    color: #d6d6d6;
+                    color: $colorDark;
                     .value {
                       margin-right: 5px;
                     }
@@ -1330,7 +1331,7 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 17px;
-            color: #fff;
+            color: $colorDark;
           }
         }
         // .mobileMenuBasket_block__totalPrice {
@@ -1383,7 +1384,7 @@
             font-size: 14px;
             line-height: 17px;
             text-align: center;
-            color: $colorLight;
+            color: $colorDark;
           }
         }
       }
@@ -1400,7 +1401,7 @@
             font-weight: normal;
             font-size: 12px;
             line-height: 15px;
-            color: #d6d6d6;
+            color: $colorDark;
           }
         }
         .beforeHeader_block__contacts {
