@@ -147,7 +147,7 @@ get_header();
                         </div>
                     </div>
                     <div class="form_send">
-                        <button class="form_send__btn">Отправить</button>
+                        <button class="form_send__btn btn primary l">Отправить</button>
                     </div>
                 </div>
                 <div class="form_sent">
