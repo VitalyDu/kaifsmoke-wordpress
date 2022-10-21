@@ -5,11 +5,33 @@ $(document).ready(function () {
       text: `Для бронирования товара необходимо авторизоваться!`,
     }).show();
   });
+  if (!USER_ID) {
+    $(".navigation_basket").hover(function () {
+      $(".navigation_basket__dropdown")
+        .find(".contentLoader")
+        .css("display", "none");
+      $(".navigation_basket__dropdown")
+        .find(".basketDropdown_block__notHaveProducts")
+        .css("display", "flex");
+    });
 
+    $(".mobileMenu_basketIcon").on("click", function () {
+      $(".mobileMenuBasket_block")
+        .find(".contentLoader")
+        .css("display", "none");
+      $(".mobileMenuBasket_block")
+        .find(".mobileMenuBasket_block__emptyProducts")
+        .css("display", "flex");
+    });
+  }
   if (USER_ID) {
-    let productsData = null;
-    let prom = Cart.get_data();
-    prom.then((data) => setModalCartProd(data));
+    $(".navigation_basket").mouseenter(function () {
+      Cart.get_data_modal();
+    });
+
+    $(".mobileMenu_basketIcon").on("click", function () {
+      Cart.get_data_modal_mobile();
+    });
 
     $("html").on("click", ".addToCardBtn", function () {
       var productId = $(this).attr("data-productId");
@@ -29,229 +51,40 @@ $(document).ready(function () {
       let productName = $(this).attr("data-productName");
       let productIdArray = [];
       productIdArray.push(productId);
-      removeFromCart(productName, productIdArray);
+      removeFromCart(
+        $(this).parents(".cartProduct"),
+        productName,
+        productIdArray
+      );
       $(`.goToCart_btn[data-productId="${productId}"]`)
         .after(
-          `<button class="btn tertiary m addToCardBtn" data-productId="${productId}" data-productName="${productName}">Забронировать</button>`
+          `<button class="btn quaternary m addToCardBtn" data-productId="${productId}" data-productName="${productName}">Забронировать</button>`
         )
         .hide()
         .fadeIn();
       $(`.goToCart_btn[data-productId="${productId}"]`).hide().remove();
+      // if ($(".shops_reservation").length) {
+      // renderMapForCart();
+      // }
     });
 
     $("body").on("click", ".basket_clear", function () {
-      clearCart();
-      if ($(".goToCart_btn").length) {
-        let name = null;
-        let id = null;
-        for (var i = 0; i <= $(".goToCart_btn").length; i++) {
-          name = $(".goToCart_btn").eq(i).attr("data-productname");
-          id = $(".goToCart_btn").eq(i).attr("data-productid");
-          $(".goToCart_btn")
-            .eq(i)
-            .after(
-              `<button class="btn tertiary m addToCardBtn" data-productId="${id}" data-productName="${name}">Забронировать</button>`
-            )
-            .hide()
-            .fadeIn();
-          $(".goToCart_btn").eq(i).hide().remove();
-        }
-        for (var i = 0; i <= $(".goToCart_btn").length; i++) {
-          name = $(".goToCart_btn").eq(i).attr("data-productname");
-          id = $(".goToCart_btn").eq(i).attr("data-productid");
-          $(".goToCart_btn")
-            .eq(i)
-            .after(
-              `<button class="btn tertiary m addToCardBtn" data-productId="${id}" data-productName="${name}">Забронировать</button>`
-            )
-            .hide()
-            .fadeIn();
-          $(".goToCart_btn").eq(i).hide().remove();
-        }
-      }
-      $(".navigation_basket__dropdown")
-        .find(".basketDropdown_block")
-        .css("display", "none");
-      $(".mobileMenuBasket_block")
-        .find(".mobileMenuBasket_block__top")
-        .css("display", "none");
-      $(".mobileMenuBasket_block")
-        .find(".mobileMenuBasket_block__products")
-        .css("display", "none");
-      $(".mobileMenuBasket_block")
-        .find(".mobileMenuBasket_block__buttons")
-        .css("display", "none");
-      $(".navigation_basket__dropdown")
-        .find(".basketDropdown_block__notHaveProducts")
-        .css("display", "flex");
-      $(".mobileMenuBasket_block")
-        .find(".mobileMenuBasket_block__emptyProducts")
-        .css("display", "flex");
+      Cart.clear();
     });
 
     function addToCart(productName, productId) {
-      Cart.add(productName, productId, 1, updateCartModal);
+      Cart.add(productName, productId, 1);
     }
 
-    function removeFromCart(productName, productId) {
-      Cart.remove(productName, productId, updateCartModal, rerenderCart);
-    }
-
-    function clearCart() {
-      Cart.clear(updateCartModal);
-    }
-
-    function updateCartModal() {
-      prom = Cart.get_data();
-      prom.then((data) => setModalCartProd(data));
-    }
-
-    function setModalCartProd(data = null) {
-      productsData = data?.out?.products ? data?.out?.products : null;
-      if (!productsData) {
-        $(".navigation_basket__dropdown")
-          .find(".basketDropdown_block")
-          .css("display", "none");
-        $(".mobileMenuBasket_block")
-          .find(".mobileMenuBasket_block__top")
-          .css("display", "none");
-        $(".mobileMenuBasket_block")
-          .find(".mobileMenuBasket_block__products")
-          .css("display", "none");
-        $(".mobileMenuBasket_block")
-          .find(".mobileMenuBasket_block__buttons")
-          .css("display", "none");
-        $(".navigation_basket__dropdown")
-          .find(".basketDropdown_block__notHaveProducts")
-          .css("display", "flex");
-        $(".mobileMenuBasket_block")
-          .find(".mobileMenuBasket_block__emptyProducts")
-          .css("display", "flex");
-      } else {
-        $(".navigation_basket__dropdown")
-          .find(".basketDropdown_block__notHaveProducts")
-          .css("display", "none");
-        $(".mobileMenuBasket_block")
-          .find(".mobileMenuBasket_block__emptyProducts")
-          .css("display", "none");
-        $(".navigation_basket__dropdown")
-          .find(".basketDropdown_block")
-          .css("display", "flex");
-        $(".mobileMenuBasket_block")
-          .find(".mobileMenuBasket_block__top")
-          .css("display", "flex");
-        $(".mobileMenuBasket_block")
-          .find(".mobileMenuBasket_block__products")
-          .css("display", "flex");
-        $(".mobileMenuBasket_block")
-          .find(".mobileMenuBasket_block__buttons")
-          .css("display", "flex");
-        renderModalCart(productsData);
-      }
-    }
-
-    function renderModalCart(data = null) {
-      $(".basketDropdown_productsQuantity")
-        .find(".allProdQuanVal")
-        .text(Object.keys(data).length);
-      if (Object.keys(data).length > 0) {
-        $(".mobileHeader_block__burger")
-          .find(".circle")
-          .css("display", "flex")
-          .text(Object.keys(data).length);
-      } else {
-        $(".mobileHeader_block__burger")
-          .find(".circle")
-          .css("display", "none")
-          .text(0);
-      }
-      $(".basketDropdown_block__content").empty();
-      Object.keys(data).forEach(function (key) {
-        $(".basketDropdown_block__content").prepend(`
-            <div class="basketDropdown_content__product productFromCart cartProduct" data-productId="${
-              this[key].id
-            }">
-              <div class="basketDropdown_product__image">
-                  <img src="${
-                    this[key].image_url
-                      ? this[key].image_url
-                      : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
-                  }" alt="${this[key].name}">
-              </div>
-              <div class="basketDropdown_product__description">
-                  <a href="/product/${
-                    this[key].slug
-                  }" class="basketDropdown_productDescription__name">
-                    ${this[key].name}
-                  </a>
-                  <div class="basketDropdown_productDescription_quntityPrice">
-                      <div class="basketDropdown_product__price">
-                          <span class="basketDropdown_product__priceValue prodPrice" data-value="${
-                            this[key].price
-                          }">${this[key].price}</span><span class="prodCurrency">руб/шт</span>
-                      </div>
-                  </div>
-                  <button class="deleteBasketProduct cartProduct_delete" data-productId="${
-                    this[key].id
-                  }" data-productName='${this[key].name}'>
-                      Удалить
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 8L16 16M16 8L12 12L8 16" stroke="#D6D6D6" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                  </button>
-              </div>
-            </div>
-          `);
-      }, data);
-
-      $(".mobileMenuBasket_block__top")
-        .find(".mobileMenuBasket_productsQuantity__value")
-        .text(Object.keys(data).length);
-      $(".mobileMenuBasket_block__products").empty();
-      Object.keys(data).forEach(function (key) {
-        $(".mobileMenuBasket_block__products").prepend(`
-            <div class="productBlock productFromCart cartProduct" data-productId="${
-              this[key].id
-            }">
-              <div class="productBlock_product">
-                  <div class="productBlock_product__img">
-                      <img src="${
-                        this[key].image_url
-                          ? this[key].image_url
-                          : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
-                      }" alt="${this[key].name}">
-                  </div>
-                  <div class="productBlock_product__nameQuantityPrice">
-                      <div class="product_nameQuantity__name">
-                          <a href="/product/${this[key].slug}">
-                            ${this[key].name}
-                          </a>
-                      </div>
-                      <div class="product_nameQuantity__QuantityPrice">
-                          <div class="quantityPrice_product__price">
-                              <div class="value" data-value="${
-                                this[key].price
-                              }">
-                                ${this[key].price}
-                              </div>
-                              <div class="currency">
-                                  руб/шт
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <button class="deleteBasketProduct cartProduct_delete" data-productId="${
-                    this[key].id
-                  }" data-productName='${this[key].name}'>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 8L16 16M16 8L12 12L8 16" stroke="#D6D6D6" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </button>
-              </div>
-            </div>
-          `);
-      }, data);
-    }
+    const removeFromCart = (product, productName, productId) => {
+      Cart.remove(
+        product,
+        productName,
+        productId,
+        rerenderCart,
+        renderMapForCart
+      );
+    };
 
     if ($(".cartPage_block").length) {
       if ($(".cartPage_block__customer").length) {
@@ -310,11 +143,11 @@ $(document).ready(function () {
                   <div class="info">
       
                       <span> <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M7.00049 3.50012V7.11123H9.50049M13.5005 7.11123C13.5005 10.7011 10.5903 13.6112 7.00049 13.6112C3.41064 13.6112 0.500488 10.7011 0.500488 7.11123C0.500488 3.52138 3.41064 0.611233 7.00049 0.611233C10.5903 0.611233 13.5005 3.52138 13.5005 7.11123Z" stroke="#000000" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M7.00049 3.50012V7.11123H9.50049M13.5005 7.11123C13.5005 10.7011 10.5903 13.6112 7.00049 13.6112C3.41064 13.6112 0.500488 10.7011 0.500488 7.11123C0.500488 3.52138 3.41064 0.611233 7.00049 0.611233C10.5903 0.611233 13.5005 3.52138 13.5005 7.11123Z" stroke="#1D1D1B" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"></path>
                           </svg>${item.schedule}</span>
       
                       <span><svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M5.10618 2.94505L3.12628 0.965149L1.64126 2.45017C1.14611 2.94532 -0.833787 4.92522 3.62099 9.37999C8.07576 13.8348 10.0557 11.8549 10.551 11.3596L12.0357 9.87479L10.0559 7.8948C9.56118 7.39959 9.56095 7.39982 9.0662 7.89457C7.58128 9.37949 3.62148 5.4197 5.1064 3.93477C5.60115 3.44002 5.60138 3.4398 5.10618 2.94505Z" stroke="#000000" stroke-width="0.8" stroke-linejoin="round"></path>
+                              <path d="M5.10618 2.94505L3.12628 0.965149L1.64126 2.45017C1.14611 2.94532 -0.833787 4.92522 3.62099 9.37999C8.07576 13.8348 10.0557 11.8549 10.551 11.3596L12.0357 9.87479L10.0559 7.8948C9.56118 7.39959 9.56095 7.39982 9.0662 7.89457C7.58128 9.37949 3.62148 5.4197 5.1064 3.93477C5.60115 3.44002 5.60138 3.4398 5.10618 2.94505Z" stroke="#1D1D1B" stroke-width="0.8" stroke-linejoin="round"></path>
                           </svg><a href="tel:${item.phone}">${
               item.phone
             }</a></span>
@@ -433,7 +266,6 @@ $(document).ready(function () {
             product_id,
             product_quantity,
             multisklad,
-            shopAddress,
             rerenderCart,
             renderMapForCart
           );
@@ -470,7 +302,6 @@ $(document).ready(function () {
               product_id,
               product_quantity,
               multisklad,
-              shopAddress,
               rerenderCart,
               renderMapForCart
             );
@@ -486,13 +317,6 @@ $(document).ready(function () {
         let product_quantity = parseInt($(this).val());
         let max_quantity = parseInt($(this).attr("max"));
         let multisklad = $(this).attr("data-idMultiSklad");
-        // let shopAddress = $(this).attr("data-shopAddress");
-        // if (product_quantity > max_quantity) {
-        //   $(this).val(max_quantity);
-        // } else if (product_quantity < 1) {
-        //   product_quantity = 1;
-        //   $(this).val(product_quantity);
-        // }
         if (product_quantity < 1) {
           product_quantity = 1;
           $(this).val(product_quantity);
@@ -504,7 +328,6 @@ $(document).ready(function () {
             product_id,
             product_quantity,
             multisklad,
-            shopAddress,
             rerenderCart,
             renderMapForCart
           );
@@ -519,16 +342,6 @@ $(document).ready(function () {
         let max_quantity = parseInt($(this).attr("max"));
         let multisklad = $(this).attr("data-idMultiSklad");
         let shopAddress = $(this).attr("data-shopAddress");
-        // if (product_quantity > max_quantity) {
-        //   $(this).val(max_quantity);
-        // } else if (product_quantity < 1) {
-        //   product_quantity = 1;
-        //   $(this).val(product_quantity);
-        // }
-        // if (!product_quantity) {
-        //   product_quantity = 1;
-        //   $(this).val(product_quantity);
-        // }
 
         if (product_quantity < 1) {
           product_quantity = 1;
@@ -541,7 +354,6 @@ $(document).ready(function () {
             product_id,
             product_quantity,
             multisklad,
-            shopAddress,
             rerenderCart,
             renderMapForCart
           );
@@ -565,7 +377,7 @@ $(document).ready(function () {
         product_priceField.attr("data-totalPrice", product_priceTotal);
       }
 
-      function rerenderCart(multisklad, shopAddress) {
+      function rerenderCart(multisklad) {
         $(`.table-item[data-idMultiSklad="${multisklad}"]`).addClass("active");
         prom = Cart.get_cart_products(multisklad);
         prom.then((data) => setCart(data));
@@ -580,14 +392,6 @@ $(document).ready(function () {
         let productSumm = 0;
         let totalSumm = 0;
         let totalProducts = 0;
-        // if ($.cookie("multisklad")) {
-        //   if (
-        //     $(".noReserveProductsWithExpectation").hasClass("active") ||
-        //     $(".reserveProductsWithExpectation").hasClass("active")
-        //   ) {
-        //     $(".cartPage_block__order").css("display", "flex");
-        //   }
-        // }
         Object.keys(data).forEach(function (key) {
           if ($.cookie("multisklad")) {
             $(".cartPage_block__products .products_content").append(`
@@ -889,7 +693,7 @@ $(document).ready(function () {
 });
 
 class Cart {
-  static clear(updateCartModal) {
+  static clear() {
     $(".loader").css("display", "flex").hide().fadeIn();
     $.ajax({
       url: AJAXURL,
@@ -900,12 +704,58 @@ class Cart {
       },
       success: async (data) => {
         $(".loader").fadeOut();
-        updateCartModal();
         if (data.status === "ok") {
           new Noty({
             type: "notification",
             text: `Список бронирования был очищен.`,
           }).show();
+
+          if ($(".goToCart_btn").length) {
+            let name = null;
+            let id = null;
+            for (var i = 0; i <= $(".goToCart_btn").length; i++) {
+              name = $(".goToCart_btn").eq(i).attr("data-productname");
+              id = $(".goToCart_btn").eq(i).attr("data-productid");
+              $(".goToCart_btn")
+                .eq(i)
+                .after(
+                  `<button class="btn tertiary m addToCardBtn" data-productId="${id}" data-productName="${name}">Забронировать</button>`
+                )
+                .hide()
+                .fadeIn();
+              $(".goToCart_btn").eq(i).hide().remove();
+            }
+            for (var i = 0; i <= $(".goToCart_btn").length; i++) {
+              name = $(".goToCart_btn").eq(i).attr("data-productname");
+              id = $(".goToCart_btn").eq(i).attr("data-productid");
+              $(".goToCart_btn")
+                .eq(i)
+                .after(
+                  `<button class="btn tertiary m addToCardBtn" data-productId="${id}" data-productName="${name}">Забронировать</button>`
+                )
+                .hide()
+                .fadeIn();
+              $(".goToCart_btn").eq(i).hide().remove();
+            }
+          }
+          $(".navigation_basket__dropdown")
+            .find(".basketDropdown_block")
+            .css("display", "none");
+          $(".mobileMenuBasket_block")
+            .find(".mobileMenuBasket_block__top")
+            .css("display", "none");
+          $(".mobileMenuBasket_block")
+            .find(".mobileMenuBasket_block__products")
+            .css("display", "none");
+          $(".mobileMenuBasket_block")
+            .find(".mobileMenuBasket_block__buttons")
+            .css("display", "none");
+          $(".navigation_basket__dropdown")
+            .find(".basketDropdown_block__notHaveProducts")
+            .css("display", "flex");
+          $(".mobileMenuBasket_block")
+            .find(".mobileMenuBasket_block__emptyProducts")
+            .css("display", "flex");
         } else {
           new Noty({
             type: "notification",
@@ -924,7 +774,14 @@ class Cart {
     return true;
   }
 
-  static remove(productName, id, updateCartModal = null, rerenderCart = null) {
+  static remove(
+    product,
+    productName,
+    id,
+    // updateCartModal = null,
+    rerenderCart = null,
+    renderMapForCart = null
+  ) {
     $(".loader").css("display", "flex").hide().fadeIn();
     $.ajax({
       url: AJAXURL,
@@ -936,12 +793,14 @@ class Cart {
       },
       success: async (data) => {
         $(".loader").fadeOut();
-        if (updateCartModal) {
-          updateCartModal();
-        }
         if (rerenderCart) {
           rerenderCart();
         }
+        console.log("remove", renderMapForCart);
+        if (renderMapForCart && $(".shops_reservation").length) {
+          renderMapForCart();
+        }
+        product.fadeOut().remove();
         if (id.length <= 1) {
           if (data.status === "ok") {
             new Noty({
@@ -1027,7 +886,7 @@ class Cart {
     return true;
   }
 
-  static add(productName, id, quantity, updateCartModal = null) {
+  static add(productName, id, quantity) {
     $(".loader").css("display", "flex").hide().fadeIn();
     $.ajax({
       url: AJAXURL,
@@ -1040,9 +899,9 @@ class Cart {
       },
       success: async (data) => {
         $(".loader").fadeOut();
-        if (updateCartModal) {
-          updateCartModal();
-        }
+        // if (updateCartModal) {
+        //   updateCartModal();
+        // }
         if (data.status === "ok") {
           new Noty({
             type: "notification",
@@ -1071,7 +930,6 @@ class Cart {
     id,
     quantity,
     multisklad,
-    shopAddress,
     rerenderCart,
     renderMapForCart
   ) {
@@ -1085,9 +943,8 @@ class Cart {
         product_quantity: quantity,
       },
       success: async (data) => {
-        rerenderCart(multisklad, shopAddress);
+        rerenderCart(multisklad);
         renderMapForCart();
-        // updateCartModal();
         if (data.status === "ok") {
           new Noty({
             type: "notification",
@@ -1122,6 +979,202 @@ class Cart {
         success: (data) => {
           if (data.status === "ok") {
             resolve(data);
+          }
+        },
+        error: () => {
+          resolve(null);
+        },
+      });
+    });
+  }
+
+  static get_data_modal() {
+    $(".navigation_basket__dropdown")
+      .find(".contentLoader")
+      .css("display", "flex");
+    $(".navigation_basket__dropdown")
+      .find(".basketDropdown_block")
+      .css("display", "none");
+    $(".navigation_basket__dropdown")
+      .find(".basketDropdown_block__notHaveProducts")
+      .css("display", "none");
+    return new Promise(function (resolve) {
+      $.ajax({
+        url: AJAXURL,
+        dataType: "json",
+        method: "GET",
+        data: {
+          action: "get_cart_data",
+        },
+        success: (data) => {
+          resolve(data);
+          $(".navigation_basket__dropdown")
+            .find(".contentLoader")
+            .css("display", "none");
+          if (!data?.out?.products) {
+            $(".navigation_basket__dropdown")
+              .find(".basketDropdown_block")
+              .css("display", "none");
+            $(".navigation_basket__dropdown")
+              .find(".basketDropdown_block__notHaveProducts")
+              .css("display", "flex");
+          } else {
+            $(".navigation_basket__dropdown")
+              .find(".basketDropdown_block__notHaveProducts")
+              .css("display", "none");
+            $(".navigation_basket__dropdown")
+              .find(".basketDropdown_block")
+              .css("display", "flex");
+            $(".basketDropdown_productsQuantity")
+              .find(".allProdQuanVal")
+              .text(Object.keys(data?.out?.products).length);
+            $(".basketDropdown_block__content").empty();
+            Object.keys(data?.out?.products).forEach(function (key) {
+              $(".basketDropdown_block__content").prepend(`
+              <div class="basketDropdown_content__product productFromCart cartProduct" data-productId="${
+                this[key].id
+              }">
+                <div class="basketDropdown_product__image">
+                    <img src="${
+                      this[key].image_url
+                        ? this[key].image_url
+                        : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
+                    }" alt="${this[key].name}">
+                </div>
+                <div class="basketDropdown_product__description">
+                    <a href="/product/${
+                      this[key].slug
+                    }" class="basketDropdown_productDescription__name">
+                      ${this[key].name}
+                    </a>
+                    <div class="basketDropdown_productDescription_quntityPrice">
+                        <div class="basketDropdown_product__price">
+                            <span class="basketDropdown_product__priceValue prodPrice" data-value="${
+                              this[key].price
+                            }">${this[key].price}</span><span class="prodCurrency">руб/шт</span>
+                        </div>
+                    </div>
+                    <button class="deleteBasketProduct cartProduct_delete" data-productId="${
+                      this[key].id
+                    }" data-productName='${this[key].name}'>
+                        Удалить
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 8L16 16M16 8L12 12L8 16" stroke="#D6D6D6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+              </div>
+            `);
+            }, data?.out?.products);
+          }
+        },
+        error: () => {
+          resolve(null);
+        },
+      });
+    });
+  }
+
+  static get_data_modal_mobile() {
+    $(".mobileMenuBasket_block").find(".contentLoader").css("display", "flex");
+    $(".mobileMenuBasket_block")
+      .find(".mobileMenuBasket_block__top")
+      .css("display", "none");
+    $(".mobileMenuBasket_block")
+      .find(".mobileMenuBasket_block__products")
+      .css("display", "none");
+    $(".mobileMenuBasket_block")
+      .find(".mobileMenuBasket_block__buttons")
+      .css("display", "none");
+    $(".mobileMenuBasket_block")
+      .find(".mobileMenuBasket_block__emptyProducts")
+      .css("display", "none");
+    return new Promise(function (resolve) {
+      $.ajax({
+        url: AJAXURL,
+        dataType: "json",
+        method: "GET",
+        data: {
+          action: "get_cart_data",
+        },
+        success: (data) => {
+          resolve(data);
+          $(".mobileMenuBasket_block")
+            .find(".contentLoader")
+            .css("display", "none");
+          if (!data?.out?.products) {
+            $(".mobileMenuBasket_block")
+              .find(".mobileMenuBasket_block__top")
+              .css("display", "none");
+            $(".mobileMenuBasket_block")
+              .find(".mobileMenuBasket_block__products")
+              .css("display", "none");
+            $(".mobileMenuBasket_block")
+              .find(".mobileMenuBasket_block__buttons")
+              .css("display", "none");
+            $(".mobileMenuBasket_block")
+              .find(".mobileMenuBasket_block__emptyProducts")
+              .css("display", "flex");
+          } else {
+            $(".mobileMenuBasket_block")
+              .find(".mobileMenuBasket_block__top")
+              .css("display", "flex");
+            $(".mobileMenuBasket_block")
+              .find(".mobileMenuBasket_block__products")
+              .css("display", "flex");
+            $(".mobileMenuBasket_block")
+              .find(".mobileMenuBasket_block__buttons")
+              .css("display", "flex");
+            $(".mobileMenuBasket_block")
+              .find(".mobileMenuBasket_block__emptyProducts")
+              .css("display", "none");
+            $(".mobileMenuBasket_block__top")
+              .find(".mobileMenuBasket_productsQuantity__value")
+              .text(Object.keys(data?.out?.products).length);
+            $(".mobileMenuBasket_block__products").empty();
+            Object.keys(data?.out?.products).forEach(function (key) {
+              $(".mobileMenuBasket_block__products").prepend(`
+            <div class="productBlock productFromCart cartProduct" data-productId="${
+              this[key].id
+            }">
+              <div class="productBlock_product">
+                  <div class="productBlock_product__img">
+                      <img src="${
+                        this[key].image_url
+                          ? this[key].image_url
+                          : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
+                      }" alt="${this[key].name}">
+                  </div>
+                  <div class="productBlock_product__nameQuantityPrice">
+                      <div class="product_nameQuantity__name">
+                          <a href="/product/${this[key].slug}">
+                            ${this[key].name}
+                          </a>
+                      </div>
+                      <div class="product_nameQuantity__QuantityPrice">
+                          <div class="quantityPrice_product__price">
+                              <div class="value" data-value="${
+                                this[key].price
+                              }">
+                                ${this[key].price}
+                              </div>
+                              <div class="currency">
+                                  руб/шт
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <button class="deleteBasketProduct cartProduct_delete" data-productId="${
+                    this[key].id
+                  }" data-productName='${this[key].name}'>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 8L16 16M16 8L12 12L8 16" stroke="#D6D6D6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+              </div>
+            </div>
+          `);
+            }, data?.out?.products);
           }
         },
         error: () => {

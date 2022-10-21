@@ -512,7 +512,7 @@ header {
       a.logo {
         margin-left: 100px;
         img {
-          max-width: 306px;
+          max-width: 200px;
           width: 100%;
           max-height: 60px;
           height: auto;
@@ -633,7 +633,6 @@ header {
             align-items: flex-start;
             justify-content: space-between;
             position: absolute;
-            top: 100%;
             right: 0px;
             box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
             border-radius: 5px;
@@ -884,7 +883,6 @@ header {
             justify-content: flex-start;
             position: absolute;
             right: 0px;
-            top: 100%;
             max-width: 370px;
             width: 100%;
             box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
@@ -1110,7 +1108,6 @@ header {
             align-items: flex-start;
             justify-content: space-between;
             position: absolute;
-            top: 100%;
             right: 0px;
             box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
             background: $colorLight;
@@ -1347,7 +1344,6 @@ header {
           border-radius: 5px;
           background: $colorLight;
           position: absolute;
-          top: 100%;
           right: 0px;
           max-width: 370px;
           width: 100%;

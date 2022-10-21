@@ -33,20 +33,6 @@
                 margin-top: 50px;
             }
             a.onHomePage {
-                background: $colorPrimary;
-                border-radius: 5px;
-                max-width: 270px;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 22px 42px;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 17px;
-                text-align: center;
-                color: $colorLight;
                 margin-top: 50px;
             }
             .answerPage_block__links {
@@ -140,8 +126,6 @@
                     margin-top: 100px;
                 }
                 a.onHomePage {
-                    max-width: 100%;
-                    width: 100%;
                     margin-top: 100px;
                 }
                 .answerPage_block__links {
@@ -213,8 +197,6 @@
                     margin-top: 50px;
                 }
                 a.onHomePage {
-                    max-width: 100%;
-                    width: 100%;
                     margin-top: 50px;
                 }
                 .answerPage_block__links {

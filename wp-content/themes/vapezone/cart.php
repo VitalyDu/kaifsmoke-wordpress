@@ -260,7 +260,7 @@ get_header();
         <div class="answerPage_block">
             <h1>Список бронирования пуст</h1>
             <img src="/wp-content/themes/vapezone/assets/images/icons/notFoundHave.png" alt="">
-            <a class="onHomePage" href="/catalog">Перейти в каталог</a>
+            <a class="onHomePage btn l primary" href="/catalog">Перейти в каталог</a>
         </div>
     </div>
 </section>

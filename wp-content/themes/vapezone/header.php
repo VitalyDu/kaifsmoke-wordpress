@@ -125,11 +125,11 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                     </span>
 
                     <div class="buttons">
-                        <button class="ty-btn ty-btn__primary ty-btn_nbg" id="no">
+                        <button class="ty-btn ty-btn__primary ty-btn_nbg btn m secondary" id="no">
                             <a href="#" class="btn__title-white">Нет</a>
                         </button>
 
-                        <button class="ty-btn ty-btn__primary ty-btn_bg" id="yes">
+                        <button class="ty-btn ty-btn__primary ty-btn_bg btn m primary" id="yes">
                             <a href="#" class="btn__title-white">Да, мне исполнилось 18 лет</a>
                         </button>
                     </div>
@@ -170,11 +170,11 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
 
                     <div class="buttons">
                         <button class="ty-btn ty-btn__primary ty-btn_bg" id="signIn">
-                            <a href="./signin/" class="btn__title-white">Вход</a>
+                            <a href="./signin/" class="btn__title-white btn m primary">Вход</a>
                         </button>
 
                         <button class="ty-btn ty-btn__primary ty-btn_nbg" id="signUp">
-                            <a href="./signup/" class="btn__title-white">Регистрация</a>
+                            <a href="./signup/" class="btn__title-white btn m secondary">Регистрация</a>
                         </button>
                     </div>
 
@@ -314,21 +314,6 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
             text-align: left;
             color: #F40500;
             margin-top: 30px;
-        }
-
-        .ty-btn_nbg {
-            background: transparent;
-            border: 1px solid #6B6B63 !important;
-        }
-
-        .ty-btn_bg {
-            background-color: #ff9100;
-        }
-
-
-        .vzpopup .ty-btn .btn__title-white,
-        .vzpopup .ty-btn__primary .btn__title-white {
-            color: #fff !important;
         }
 
 
@@ -490,7 +475,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                     ?>
                     <?php echo do_shortcode('[fibosearch]'); ?>
                 </div>
-                <a href="/" class="logo"><img src="/wp-content/themes/vapezone/assets/images/logo.png" alt="kaifsmoke"></a>
+                <a href="/" class="logo"><img src="/wp-content/themes/vapezone/assets/images/logo.svg" alt="kaifsmoke"></a>
                 <ul itemscope itemtype="https://schema.org/SiteNavigationElement" class="header_block__navigation">
                     <li class="navigation_shops"><a href="/shops/">Магазины</a></li>
                     <li class="navigation_more">
@@ -509,39 +494,18 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                             </svg>
                         </a>
                         <div class="navigation_favorites__dropdown">
-                            <div class="favoritesDropdown_block__notHaveFavorites">
+                            <div class="contentLoader" style="display: flex;">
+                                <div class="spinner"></div>
+                            </div>
+                            <div class="favoritesDropdown_block__notHaveFavorites" style="display: none;">
                                 <span class="favoritesDropdown_blockNotHaveFavorites__text">Список избранного пуст</span>
                             </div>
-                            <div class="favoritesDropdown_block">
+                            <div class="favoritesDropdown_block" style="display: none;">
                                 <div class="favoritesDropdown_block__top allProdQuan">
                                     <span class="favoritesDropdown_productsQuantity"><span class="allProdQuanVal"></span> товара</span>
                                     <button class="favorites_clear">Очистить</button>
                                 </div>
                                 <div class="favoritesDropdown_block__content allProd">
-                                    <!-- <div class="favoritesDropdown_content__product prod">
-                                <div class="favoritesDropdown_product__image">
-                                    <img src="/wp-content/themes/vapezone/assets/images/favoritesDropdownProduct.png" alt="">
-                                </div>
-                                <div class="favoritesDropdown_product__description">
-                                    <span class="favoritesDropdown_productDescription__name">
-                                        Жидкость Bad Salt Cereal Trip 30/20
-                                    </span>
-                                    <div class="favoritesDropdown_productDescription_quntityPrice">
-                                        <div class="favoritesDropdown_product__quantity">
-                                            <input type="number" maxlength="3" name="productQuantity" class="productQuantity" value="1" readonly><span>шт</span>
-                                        </div>
-                                        <div class="favoritesDropdown_product__price">
-                                            <span class="favoritesDropdown_product__priceValue" data-value="998">998</span>руб
-                                        </div>
-                                    </div>
-                                    <button class="deleteFavoriteProduct">
-                                        Удалить
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8 8L16 16M16 8L12 12L8 16" stroke="#D6D6D6" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div> -->
                                 </div>
                                 <div class="favorites_block__bottom">
                                     <a itemprop="url" href="/favorites" class="btn s primary">Избранное</a>
@@ -617,10 +581,13 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                             </svg>
                         </a>
                         <div class="navigation_basket__dropdown">
-                            <div class="basketDropdown_block__notHaveProducts">
+                            <div class="contentLoader" style="display: flex;">
+                                <div class="spinner"></div>
+                            </div>
+                            <div class="basketDropdown_block__notHaveProducts" style="display: none;">
                                 <span class="basketDropdown_blockNotHaveProducts__text">Корзина пуста</span>
                             </div>
-                            <div class="basketDropdown_block">
+                            <div class="basketDropdown_block" style="display: none;">
                                 <div class="basketDropdown_block__top allProdQuan">
                                     <span class="basketDropdown_productsQuantity"><span class="allProdQuanVal">1</span>
                                         товаров</span>
@@ -652,11 +619,11 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
         <div class="container mobileHeader onlyMobile">
             <div class="mobileHeader_block">
                 <a itemprop="url" href="/" class="mobileHeader_block__logo">
-                    <img src="/wp-content/themes/vapezone/assets/images/logo.png" alt="kaifsmoke">
+                    <img src="/wp-content/themes/vapezone/assets/images/logo.svg" alt="kaifsmoke">
                 </a>
                 <div class="mobileHeader_block__logoSearchBurger">
                     <a itemprop="url" href="/" class="mobileHeaderFixed_block__logo">
-                        <img src="/wp-content/themes/vapezone/assets/images/logo.png" alt="kaifsmoke">
+                        <img src="/wp-content/themes/vapezone/assets/images/logo.svg" alt="kaifsmoke">
                     </a>
                     <div class="mobileHeader_block__search">
                         <!-- <input type="search" placeholder="Поиск"> -->
@@ -890,7 +857,10 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                         </a>
                     </li>
                 </div>
-                <div class="mobileMenuFavorites_block__top allProdQuan">
+                <div class="contentLoader" style="display: flex;">
+                    <div class="spinner"></div>
+                </div>
+                <div class="mobileMenuFavorites_block__top allProdQuan" style="display: none;">
                     <div class="mobileMenuFavorites_top__productsQuantity">
                         <div class="mobileMenuFavorites_productsQuantity__value allProdQuanVal">
                             1
@@ -903,42 +873,13 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                         <button class="favorites_clear">Очистить</button>
                     </div>
                 </div>
-                <div class="mobileMenuFavorites_block__products allProd">
-                    <!-- <div class="productBlock prod"> -->
-                    <!-- <div class="productBlock_product prod">
-                    <div class="productBlock_product__img">
-                        <img src="/wp-content/themes/vapezone/assets/images/products/productCard.png" alt="">
-                    </div>
-                    <div class="productBlock_product__nameQuantityPrice">
-                        <div class="product_nameQuantity__name">
-                            <a href="">
-                                Жидкость Bad Salt Cereal Trip
-                            </a>
-                        </div>
-                        <div class="product_nameQuantity__QuantityPrice">
-                            <div class="quantityPrice_product__price">
-                                <div class="value">
-                                    998
-                                </div>
-                                <div class="currency">
-                                    руб
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="deleteFavoriteProduct">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 8L16 16M16 8L12 12L8 16" stroke="#D6D6D6" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </div> -->
-                    <!-- </div> -->
+                <div class="mobileMenuFavorites_block__products allProd" style="display: none;">
                 </div>
-                <div class="mobileMenuFavorites_block__goToFavorites">
-                    <a href="/favorites">Избранное</a>
+                <div class="mobileMenuFavorites_block__goToFavorites" style="display: none;">
+                    <a href="/favorites" class="btn s primary">Избранное</a>
                 </div>
-                <div class="mobileMenuFavorites_block__emptyProducts">
-                    <span class="emptyProducts_label">Список бронирования пуст</span>
+                <div class="mobileMenuFavorites_block__emptyProducts" style="display: none;">
+                    <span class="emptyProducts_label">Список избранного пуст</span>
                 </div>
             </div>
         </div>
@@ -954,7 +895,10 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                         </a>
                     </li>
                 </div>
-                <div class="mobileMenuBasket_block__top allProdQuan">
+                <div class="contentLoader" style="display: flex;">
+                    <div class="spinner"></div>
+                </div>
+                <div class="mobileMenuBasket_block__top allProdQuan" style="display: none;">
                     <div class="mobileMenuBasket_top__productsQuantity">
                         <div class="mobileMenuBasket_productsQuantity__value allProdQuanVal">
                             1
@@ -967,59 +911,14 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                         <button>Очистить</button>
                     </div>
                 </div>
-                <div class="mobileMenuBasket_block__products allProd">
+                <div class="mobileMenuBasket_block__products allProd" style="display: none;">
                     <div class="productBlock prod">
-                        <!-- <div class="productBlock_product">
-                    <div class="productBlock_product__img">
-                        <img src="/wp-content/themes/vapezone/assets/images/products/productCard.png" alt="">
-                    </div>
-                    <div class="productBlock_product__nameQuantityPrice">
-                        <div class="product_nameQuantity__name">
-                            <a href="">
-                                Жидкость Bad Salt Cereal Trip
-                            </a>
-                        </div>
-                        <div class="product_nameQuantity__QuantityPrice">
-                            <div class="quantityPrice_product__quantity">
-                                <div class="value productQuantity">
-                                    1
-                                </div>
-                                <div class="unit">
-                                    шт
-                                </div>
-                            </div>
-                            <div class="quantityPrice_product__price">
-                                <div class="value">
-                                    998
-                                </div>
-                                <div class="currency">
-                                    руб
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                     </div>
                 </div>
-                <!-- <div class="mobileMenuBasket_block__totalPrice">
-        <span class="mobileMenuBasket_totalPrice__text">
-            Итого
-        </span>
-        <span class="mobileMenuBasket_totalPrice__price">
-            <span class="value">
-                2 994
-            </span>
-            <span class="currency">
-                руб
-            </span>
-        </span>
-    </div> -->
-                <div class="mobileMenuBasket_block__buttons">
-                    <!-- <a class="goToBasket">Корзина</a>
-        <a class="goToOrdering">Оформить заказ</a> -->
-                    <a href="/reservation" class="goToOrdering">Бронирование</a>
+                <div class="mobileMenuBasket_block__buttons" style="display: none;">
+                    <a href="/reservation" class="btn s primary">Бронирование</a>
                 </div>
-                <div class="mobileMenuBasket_block__emptyProducts">
+                <div class="mobileMenuBasket_block__emptyProducts" style="display: none;">
                     <span class="emptyProducts_label">Список бронирования пуст</span>
                 </div>
             </div>

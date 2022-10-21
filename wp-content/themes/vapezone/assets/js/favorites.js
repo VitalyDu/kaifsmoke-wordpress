@@ -8,10 +8,18 @@ $(document).ready(() => {
   let products = [];
   let cookieFavorites = $.cookie("favorites");
 
-  Favorites.export_data();
+  $(".navigation_favorites").mouseenter(function () {
+    Favorites.export_data();
+  });
+
+  $(".mobileMenu_favoritesIcon").on("click", function () {
+    Favorites.export_data_mobile();
+  });
 
   $("html").on("click", ".deleteFavoriteProduct", function () {
-    Favorites.remove($(this).attr("data-id"), $(this).attr("data-productName"));
+    let id = $(this).attr("data-id");
+    let name = $(this).attr("data-productName");
+    Favorites.remove($(this).parents(".favoritesProduct"), id, name);
     $(
       `.favoritesPage_products__product[data-productId="${$(this).attr(
         "data-id"
@@ -65,6 +73,7 @@ $(document).ready(() => {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
       Favorites.remove(
+        null,
         $(this).parents(".product_miniCard").attr("data-productid"),
         $(this).parents(".product_miniCard").attr("data-productName")
       );
@@ -158,7 +167,7 @@ class Favorites {
     return status;
   }
 
-  static remove(id, productName) {
+  static remove(product = null, id, name) {
     let status = "error";
     let array = this.get();
     if (array.includes(id)) {
@@ -166,13 +175,16 @@ class Favorites {
       array.splice(index, 1);
       status = "ok";
       this.#write(array);
-      $(".navigation_favorites__dropdown")
-        .find(`.favoritesDropdown_content__product[data-id="${id}"]`)
-        .fadeOut()
-        .remove();
+      if (product) {
+        product.fadeOut().remove();
+      }
+      // $(".navigation_favorites__dropdown")
+      //   .find(`.favoritesDropdown_content__product[data-id="${id}"]`)
+      //   .fadeOut()
+      //   .remove();
       new Noty({
         type: "notification",
-        text: `Товар "${productName}" был удалён из избранного.`,
+        text: `Товар "${name}" был удалён из избранного.`,
       }).show();
     }
 
@@ -180,6 +192,15 @@ class Favorites {
   }
 
   static export_data() {
+    $(".navigation_favorites__dropdown")
+      .find(".contentLoader")
+      .css("display", "flex");
+    $(".navigation_favorites__dropdown")
+      .find(".favoritesDropdown_block")
+      .css("display", "none");
+    $(".navigation_favorites__dropdown")
+      .find(".favoritesDropdown_block__notHaveFavorites")
+      .css("display", "none");
     return new Promise(function (resolve) {
       $.ajax({
         url: AJAXURL,
@@ -191,44 +212,22 @@ class Favorites {
         },
         success: (data) => {
           resolve(data);
-          // console.log(data);
+          $(".navigation_favorites__dropdown")
+            .find(".contentLoader")
+            .css("display", "none");
           if (!data.out.products) {
             $(".navigation_favorites__dropdown")
               .find(".favoritesDropdown_block")
               .css("display", "none");
-            $(".mobileMenuFavorites_block")
-              .find(".mobileMenuFavorites_block__top")
-              .css("display", "none");
-            $(".mobileMenuFavorites_block")
-              .find(".mobileMenuFavorites_block__products")
-              .css("display", "none");
-            $(".mobileMenuFavorites_block")
-              .find(".mobileMenuFavorites_block__goToFavorites")
-              .css("display", "none");
             $(".navigation_favorites__dropdown")
               .find(".favoritesDropdown_block__notHaveFavorites")
-              .css("display", "flex");
-            $(".mobileMenuFavorites_block")
-              .find(".mobileMenuFavorites_block__emptyProducts")
               .css("display", "flex");
           } else {
             $(".navigation_favorites__dropdown")
               .find(".favoritesDropdown_block__notHaveFavorites")
               .css("display", "none");
-            $(".mobileMenuFavorites_block")
-              .find(".mobileMenuFavorites_block__emptyProducts")
-              .css("display", "none");
             $(".navigation_favorites__dropdown")
               .find(".favoritesDropdown_block")
-              .css("display", "flex");
-            $(".mobileMenuFavorites_block")
-              .find(".mobileMenuFavorites_block__top")
-              .css("display", "flex");
-            $(".mobileMenuFavorites_block")
-              .find(".mobileMenuFavorites_block__products")
-              .css("display", "flex");
-            $(".mobileMenuFavorites_block")
-              .find(".mobileMenuFavorites_block__goToFavorites")
               .css("display", "flex");
             $(".favoritesDropdown_productsQuantity")
               .find(".allProdQuanVal")
@@ -236,7 +235,7 @@ class Favorites {
             $(".favoritesDropdown_block__content").empty();
             Object.keys(data.out.products).forEach(function (key) {
               $(".favoritesDropdown_block__content").prepend(`
-        <div class="favoritesDropdown_content__product prod" data-productId="${this[key].id}">
+        <div class="favoritesDropdown_content__product prod favoritesProduct" data-productId="${this[key].id}">
             <div class="favoritesDropdown_product__image">
                 <img src="${this[key].image_url}" alt="${this[key].name}">
             </div>
@@ -259,13 +258,78 @@ class Favorites {
         </div>
       `);
             }, data.out.products);
+          }
+        },
+        error: () => {
+          resolve(null);
+        },
+      });
+    });
+  }
+
+  static export_data_mobile() {
+    $(".mobileMenuFavorites_block")
+      .find(".contentLoader")
+      .css("display", "flex");
+    $(".mobileMenuFavorites_block")
+      .find(".mobileMenuFavorites_block__top")
+      .css("display", "none");
+    $(".mobileMenuFavorites_block")
+      .find(".mobileMenuFavorites_block__products")
+      .css("display", "none");
+    $(".mobileMenuFavorites_block")
+      .find(".mobileMenuFavorites_block__goToFavorites")
+      .css("display", "none");
+    $(".mobileMenuFavorites_block")
+      .find(".mobileMenuFavorites_block__emptyProducts")
+      .css("display", "none");
+    return new Promise(function (resolve) {
+      $.ajax({
+        url: AJAXURL,
+        dataType: "json",
+        method: "GET",
+        data: {
+          favorites: $.cookie("favorites"),
+          action: "get_favs_data_action",
+        },
+        success: (data) => {
+          resolve(data);
+          $(".mobileMenuFavorites_block")
+            .find(".contentLoader")
+            .css("display", "none");
+          if (!data.out.products) {
+            $(".mobileMenuFavorites_block")
+              .find(".mobileMenuFavorites_block__top")
+              .css("display", "none");
+            $(".mobileMenuFavorites_block")
+              .find(".mobileMenuFavorites_block__products")
+              .css("display", "none");
+            $(".mobileMenuFavorites_block")
+              .find(".mobileMenuFavorites_block__goToFavorites")
+              .css("display", "none");
+            $(".mobileMenuFavorites_block")
+              .find(".mobileMenuFavorites_block__emptyProducts")
+              .css("display", "flex");
+          } else {
+            $(".mobileMenuFavorites_block")
+              .find(".mobileMenuFavorites_block__emptyProducts")
+              .css("display", "none");
+            $(".mobileMenuFavorites_block")
+              .find(".mobileMenuFavorites_block__top")
+              .css("display", "flex");
+            $(".mobileMenuFavorites_block")
+              .find(".mobileMenuFavorites_block__products")
+              .css("display", "flex");
+            $(".mobileMenuFavorites_block")
+              .find(".mobileMenuFavorites_block__goToFavorites")
+              .css("display", "flex");
             $(".mobileMenuFavorites_block__top")
               .find(".mobileMenuFavorites_productsQuantity__value")
               .text(Object.keys(data.out.products).length);
             $(".mobileMenuFavorites_block__products").empty();
             Object.keys(data.out.products).forEach(function (key) {
               $(".mobileMenuFavorites_block__products").prepend(`
-      <div class="productBlock favoritesDropdown_content__product" data-productId="${this[key].id}">
+      <div class="productBlock favoritesDropdown_content__product favoritesProduct" data-productId="${this[key].id}">
         <div class="productBlock_product">
           <div class="productBlock_product__img">
               <img src="${this[key].image_url}" alt="${this[key].name}">
