@@ -1,0 +1,237 @@
+.ordersPage {
+  padding: 30px 0px 30px 0px;
+  .container {
+    .ordersPage_block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 50px 0px;
+      .ordersPage_block__order {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: center;
+        width: 100%;
+        padding: 14px 30px;
+        background: $colorLight;
+        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        .order_status {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          max-width: 195px;
+          width: 100%;
+          padding-right: 20px;
+          border-right: 1px solid rgba(29, 29, 27, 0.05);
+          .icon {
+            margin-right: 10px;
+          }
+          span {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: left;
+            color: $colorDark;
+            &.expects {
+              color: #31a337;
+            }
+            &.canceled {
+              color: #e9530d;
+            }
+            &.delivery_status,
+            &.open {
+              color: #2074c1;
+            }
+            &.received {
+              color: $colorDark;
+            }
+          }
+        }
+        .order_properties {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          max-width: 184px;
+          width: 100%;
+          padding-left: 19px;
+          margin-right: 50px;
+          .order_properties__property {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 165px;
+            width: 100%;
+            margin-bottom: 10px;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+            span {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 15px;
+              color: $colorGrey;
+            }
+          }
+        }
+        .order_images {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+          margin-right: 50px;
+          max-width: 460px;
+          width: 100%;
+          overflow-x: auto;
+          scrollbar-color: #6969dd #e0e0e0;
+          scrollbar-width: thin;
+          padding-right: 10px;
+          &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 100px;
+          }
+          &::-webkit-scrollbar-track {
+            background: #f3f3f3;
+            border-radius: 5px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background: #d6d6d6;
+            border: 0px none $colorLight;
+            border-radius: 60px;
+          }
+          .order_images__img {
+            width: 100px;
+            height: 100px;
+            min-width: 100px;
+            min-height: 100px;
+            max-width: 100px;
+            max-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+        .order_moreDetails {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 170px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1169px) {
+  .ordersPage {
+    .container {
+      .ordersPage_block {
+        padding: 30px 0px 80px 0px;
+        .ordersPage_block__order {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 20px 15px;
+          margin-bottom: 50px;
+          .order_status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 20px;
+            padding-right: 0;
+            border: none;
+            span {
+              font-size: 20px;
+              line-height: 24px;
+              &.success {
+                color: #31a337;
+              }
+              &.notPaid {
+                color: #e9530d;
+              }
+            }
+          }
+          .order_properties {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            max-width: 100%;
+            width: 100%;
+            padding-left: 0px;
+            margin-right: 0px;
+            .order_properties__property {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              max-width: 100%;
+              width: 100%;
+              span {
+              }
+            }
+          }
+          .order_images {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-right: 0px;
+            max-width: 100%;
+            width: 100%;
+            margin-top: 20px;
+            .order_images__img {
+              width: 125px;
+              height: 125px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-right: 10px;
+              margin-top: 10px;
+              &:nth-of-type(2n) {
+                margin-right: 0;
+              }
+              &:nth-of-type(1n + 5) {
+                display: none;
+              }
+              img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+              }
+            }
+          }
+          .order_moreDetails {
+            display: flex;
+            align-items: center;
+            max-width: 100%;
+            width: 100%;
+            margin-top: 30px;
+            a.moreDetails_link {
+            }
+          }
+        }
+      }
+    }
+  }
+}

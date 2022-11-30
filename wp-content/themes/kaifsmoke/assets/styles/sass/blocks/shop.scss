@@ -1,0 +1,414 @@
+.shop {
+    padding: 20px 0px 115px 0px;
+    .container {
+        .shop_block {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 50px;
+            .shop_block_images {
+                max-width: 470px;
+                width: 100%;
+                position: relative;
+                .shop_blockImages__carousel {
+                    .owl-nav {
+                        position: absolute;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 0;
+                        top: calc(50% - 55px);
+                        opacity: 0;
+                        button {
+                            svg {
+                                width: 100%;
+                                height: auto;
+                            }
+                            &:hover {
+                                background: none;
+                                svg {
+                                    g {
+                                        path {
+                                            fill: $colorPrimary;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .owl-prev {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    .owl-dots {
+                        margin-top: 30px;
+                        button {
+                            span {
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background: $colorDark;
+                                border: 1px solid $colorDark;
+                            }
+                        }
+                        button.active {
+                            span {
+                                background: $colorPrimary;
+                                border: 1px solid $colorPrimary;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .owl-nav {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .shop_block_description {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            max-width: 670px;
+            width: 100%;
+            min-height: 470px;
+            background: $colorLight;
+            box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+            h3 {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 29px;
+
+                /* Rich Black */
+
+                color: $colorDark;
+            }
+            .shop_blockDescription_detailInf {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                width: 100%;
+                margin-top: 24px;
+                .shop_blockDescriptionDetailInf_item {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding: 26px 0px 3px 0px;
+                    border-bottom: 1px solid rgba(29, 29, 27, 0.05);
+                    .shop_blockDescriptionDetailInf_itemTitle {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 20px;
+                        /* identical to box height */
+
+                        color: $colorDark;
+                    }
+                    .shop_blockDescriptionDetailInf_itemText {
+                        display: flex;
+                        align-items: center;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 17px;
+                        /* identical to box height */
+
+                        text-align: right;
+
+                        color: $colorDark;
+                        svg {
+                            margin-right: 9px;
+                        }
+                    }
+                }
+            }
+            p {
+                margin-top: 49px;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 17px;
+
+                color: $colorGrey;
+            }
+            .shop_blockDescription__shopLink {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 50px;
+                a {
+                    margin-right: 50px;
+                    svg {
+                        max-width: 100%;
+                        width: 100%;
+                        height: auto;
+                    }
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                    &:hover {
+                        &.yandex {
+                            svg {
+                                path {
+                                    &:nth-of-type(1) {
+                                        fill: $colorPrimary;
+                                    }
+                                    &:nth-of-type(2) {
+                                        fill: $colorPrimary;
+                                    }
+                                    &:nth-of-type(3) {
+                                        fill: $colorLight;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        &.twoGis {
+                            svg {
+                                path {
+                                    &:nth-of-type(1) {
+                                        fill: $colorPrimary;
+                                    }
+                                    &:nth-of-type(2) {
+                                        fill: $colorLight;
+                                    }
+                                    &:nth-of-type(3) {
+                                        fill: $colorPrimary;
+                                    }
+                                }
+                            }
+                        }
+                        &.google {
+                            svg {
+                                path {
+                                    fill: $colorPrimary;
+                                }
+                            }
+                        }
+                        // svg {
+                        //     path {
+                        //         fill: $colorPrimary;
+                        //     }
+                        // }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.shopOnMap {
+    padding-bottom: 80px;
+    .container {
+        .shopOnMap_block {
+            padding-top: 50px;
+            img {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1169px) {
+    .shop {
+        padding: 20px 0px 115px 0px;
+        .container {
+            .shop_block {
+                flex-wrap: wrap;
+                padding-top: 20px;
+                .shop_block_images {
+                    max-width: 470px;
+                    width: 100%;
+                    position: relative;
+                    .shop_blockImages__carousel {
+                        .owl-nav {
+                            position: absolute;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-top: 0;
+                            top: 185px;
+                            opacity: 0;
+                            button {
+                                svg {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                &:hover {
+                                    background: none;
+                                    svg {
+                                        g {
+                                            path {
+                                                fill: $colorPrimary;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .owl-prev {
+                                transform: rotate(180deg);
+                            }
+                        }
+                        .owl-dots {
+                            margin-top: 30px;
+                            button {
+                                span {
+                                    width: 5px;
+                                    height: 5px;
+                                    border-radius: 50%;
+                                    background: $colorDark;
+                                    border: 1px solid $colorDark;
+                                }
+                            }
+                            button.active {
+                                span {
+                                    background: $colorPrimary;
+                                    border: 1px solid $colorPrimary;
+                                }
+                            }
+                        }
+                        &:hover {
+                            .owl-nav {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            .shop_block_description {
+                padding: 0;
+                box-shadow: none;
+                h3 {
+                    padding: 15px;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $colorDark;
+                }
+                .shop_blockDescription_detailInf {
+                    margin-top: 0;
+                    .shop_blockDescriptionDetailInf_item {
+                        padding: 26px 0px 3px 0px;
+                        border-bottom: 1px solid rgba(29, 29, 27, 0.05);
+                        .shop_blockDescriptionDetailInf_itemTitle {
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 15px;
+                            color: $colorDark;
+                        }
+                        .shop_blockDescriptionDetailInf_itemText {
+                            display: flex;
+                            align-items: center;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 12px;
+                            line-height: 15px;
+                            text-align: right;
+                            color: $colorDark;
+                            max-width: 155px;
+                            svg {
+                                margin-right: 9px;
+                            }
+                        }
+                    }
+                }
+                p {
+                    margin-top: 50px;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 15px;
+                    text-align: center;
+                    color: $colorGrey;
+                }
+                .shop_blockDescription__shopLink {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 40px;
+                    a {
+                        margin-right: 0px;
+                        margin-bottom: 40px;
+                        svg {
+                            max-width: 100%;
+                            width: 100%;
+                            height: auto;
+                        }
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                        &:hover {
+                            &.yandex {
+                                svg {
+                                    path {
+                                        &:nth-of-type(1) {
+                                            fill: inherit;
+                                        }
+                                        &:nth-of-type(2) {
+                                            fill: inherit;
+                                        }
+                                        &:nth-of-type(3) {
+                                            fill: inherit;
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                            &.twoGis {
+                                svg {
+                                    path {
+                                        &:nth-of-type(1) {
+                                            fill: inherit;
+                                        }
+                                        &:nth-of-type(2) {
+                                            fill: inherit;
+                                        }
+                                        &:nth-of-type(3) {
+                                            fill: inherit;
+                                        }
+                                    }
+                                }
+                            }
+                            &.google {
+                                svg {
+                                    path {
+                                        fill: inherit;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .shopOnMap {
+        padding-bottom: 80px;
+        .container {
+            .shopOnMap_block {
+                padding-top: 30px;
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

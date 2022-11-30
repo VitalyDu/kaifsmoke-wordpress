@@ -1,0 +1,165 @@
+.signUpPage__title {
+  padding: 30px 0px 50px 0px;
+}
+
+.signUpPage {
+  padding: 0px 0px 110px 0px;
+  .container {
+    .signUpPage_block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      background: $colorLight;
+      box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
+      padding: 30px;
+      h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: $colorDark;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: left;
+      }
+      .signUpPage_block__profileInf {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 40px;
+        .signUpPage_profileInf__block {
+          margin-bottom: 46px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 30px;
+          grid-row-gap: 13px;
+          width: 100%;
+          @media (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+          }
+          .dateField {
+            @media (max-width: 768px) {
+              order: 2;
+            }
+          }
+          .phoneField{
+            @media (max-width: 768px) {
+              order: 3;
+            }
+          }
+          .phoneVerificationField,
+          .phoneVerificationStatus {
+            @media (max-width: 768px) {
+              order: 4;
+            }
+          }
+        }
+      }
+      .signUpPage_block__password {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 13px;
+        width: 100%;
+        @media (max-width: 768px) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        // margin-top: 37px;
+      }
+      .signUpPage_block__signUp {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+        .fieldSignUp {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          .signUp_btn {
+            border: none;
+            outline: none;
+            max-width: 370px;
+            width: 100%;
+            padding: 21px 42px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $colorPrimary;
+            border-radius: 5px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            color: $colorLight;
+            cursor: pointer;
+          }
+          .signUp_errors {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            margin: 20px 0px;
+            display: none;
+            p {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 15px;
+              width: 100%;
+              text-align: center;
+              color: $colorError;
+              padding: 5px 0px;
+              border-top: 1px solid #e9400d18;
+              &:first-of-type {
+                margin-top: 0;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1169px) {
+  .signUpPage__title {
+    padding: 30px 0px 50px 0px;
+  }
+  .signUpPage {
+    padding: 0px 0px 80px 0px;
+    .container {
+      .signUpPage_block {
+        box-shadow: none;
+        padding: 0px;
+        h3 {
+          margin-bottom: 10px;
+        }
+        .signUpPage_block__signUp {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          margin-top: 50px;
+          .fieldSignUp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+}

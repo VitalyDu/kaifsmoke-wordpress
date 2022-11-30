@@ -1,0 +1,13 @@
+@mixin create-custom-properties($prefix, $properties) {
+  @each $key, $value in $properties {
+    --#{$prefix}-#{$key}: #{$value};
+  }
+}
+
+@mixin variants-from-array($sizes) {
+  @each $key, $value in $sizes {
+    &-#{$key} {
+      @content ($key, $value);
+    }
+  }
+}
