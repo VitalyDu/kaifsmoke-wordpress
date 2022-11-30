@@ -159,7 +159,7 @@
 }
 
 header {
-  background: $colorDark;
+  background: $colorLight;
   z-index: 100;
   width: 100%;
   position: sticky;
@@ -185,12 +185,12 @@ header {
             font-weight: normal;
             font-size: 16px;
             line-height: 20px;
-            color: $colorLight;
+            color: $colorDark;
             display: flex;
             align-items: center;
             &::before {
               content: "";
-              background: url("../images/dropdownBottomArrow.svg");
+              background: url("../images/dropdownBottomArrowDark.svg");
               background-size: contain;
               background-repeat: no-repeat;
               background-position: center;
@@ -209,7 +209,7 @@ header {
             top: 100%;
             left: 0%;
             transform: translateX(0%);
-            background: $colorDark;
+            background: $colorLight;
             box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
             border-radius: 5px 0px 0px 5px;
             max-width: 370px;
@@ -239,7 +239,7 @@ header {
                   font-weight: normal;
                   font-size: 16px;
                   line-height: 20px;
-                  color: $colorLight;
+                  color: $colorDark;
                 }
               }
             }
@@ -252,7 +252,7 @@ header {
                   position: absolute;
                   right: 0px;
                   top: 0px;
-                  background: url("../images/dropdownRightArrow.svg");
+                  background: url("../images/dropdownRightArrowDark.svg");
                   background-size: contain;
                   background-position: center;
                   transition: 0.2s all linear;
@@ -267,7 +267,7 @@ header {
                 top: 0px;
                 left: 0%;
                 transform: translateX(100%);
-                background: $colorDark;
+                background: $colorLight;
                 box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
                 max-width: 370px;
                 width: 100%;
@@ -290,7 +290,7 @@ header {
                       margin-right: 20px;
                       svg {
                         path {
-                          stroke: $colorLight;
+                          stroke: $colorDark;
                         }
                       }
                     }
@@ -299,7 +299,7 @@ header {
                       font-weight: normal;
                       font-size: 16px;
                       line-height: 20px;
-                      color: $colorLight;
+                      color: $colorDark;
                     }
                     &::after {
                       display: none;
@@ -316,7 +316,7 @@ header {
                       position: absolute;
                       right: 0px;
                       top: 0px;
-                      background: url("../images/dropdownRightArrow.svg");
+                      background: url("../images/dropdownRightArrowDark.svg");
                       background-size: contain;
                       background-position: center;
                       transition: 0.2s all linear;
@@ -331,7 +331,7 @@ header {
                     top: 0px;
                     left: 0%;
                     transform: translateX(100%);
-                    background: $colorDark;
+                    background: $colorLight;
                     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
                     max-width: 370px;
                     width: 100%;
@@ -354,7 +354,7 @@ header {
                           margin-right: 20px;
                           svg {
                             path {
-                              stroke: $colorLight;
+                              stroke: $colorDark;
                             }
                           }
                         }
@@ -363,7 +363,7 @@ header {
                           font-weight: normal;
                           font-size: 16px;
                           line-height: 20px;
-                          color: $colorLight;
+                          color: $colorDark;
                         }
                         &::after {
                           display: none;
@@ -484,9 +484,9 @@ header {
           font-weight: normal;
           font-size: 16px;
           line-height: 20px;
-          color: $colorDark;
+          color: $colorLight;
           background: $colorLight;
-          border: 1px solid $colorLight;
+          border: 1px solid $colorDark;
           box-sizing: border-box;
           border-radius: 15px;
           outline: none;
@@ -522,7 +522,7 @@ header {
           font-weight: normal;
           font-size: 16px;
           line-height: 20px;
-          color: $colorLight;
+          color: $colorDark;
         }
         .navigation_more {
           a.navigation_more__link {
@@ -533,10 +533,10 @@ header {
             font-weight: normal;
             font-size: 16px;
             line-height: 20px;
-            color: $colorLight;
+            color: $colorDark;
             &::before {
               content: "";
-              background: url("../images/dropdownBottomArrow.svg");
+              background: url("../images/dropdownBottomArrowDark.svg");
               background-size: contain;
               background-repeat: no-repeat;
               background-position: center;
@@ -559,7 +559,7 @@ header {
             max-height: 0px;
             padding: 0px 20px 0px 20px;
             box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
-            background: $colorDark;
+            background: $colorLight;
             border-radius: 5px;
             overflow: hidden;
             z-index: 100;
@@ -574,7 +574,7 @@ header {
                 font-weight: normal;
                 font-size: 16px;
                 line-height: 20px;
-                color: $colorLight;
+                color: $colorDark;
               }
             }
           }
@@ -605,7 +605,7 @@ header {
             font-weight: normal;
             font-size: 16px;
             line-height: 20px;
-            color: $colorLight;
+            color: $colorDark;
             &:hover {
               color: $colorPrimary;
             }
@@ -628,7 +628,7 @@ header {
             right: 0px;
             box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
             border-radius: 5px;
-            background: $colorDark;
+            background: $colorLight;
             padding: 0px 20px 0px 20px;
             max-width: 470px;
             width: 100%;
@@ -677,7 +677,7 @@ header {
                   font-size: 14px;
                   line-height: 17px;
 
-                  color: $colorLight;
+                  color: $colorDark;
                   cursor: pointer;
                 }
               }
@@ -744,7 +744,7 @@ header {
                       font-weight: normal;
                       font-size: 16px;
                       line-height: 20px;
-                      color: $colorLight;
+                      color: $colorDark;
                       padding: 0;
                     }
                     .favoritesDropdown_productDescription_quntityPrice {
@@ -772,7 +772,7 @@ header {
                           font-weight: normal;
                           font-size: 12px;
                           line-height: 15px;
-                          color: #d6d6d6;
+                          color: $colorDark;
                           &::-webkit-outer-spin-button,
                           &::-webkit-inner-spin-button {
                             /* display: none; <- Crashes Chrome on hover */
@@ -786,7 +786,7 @@ header {
                           font-weight: normal;
                           font-size: 12px;
                           line-height: 15px;
-                          color: #d6d6d6;
+                          color: $colorDark;
                         }
                       }
                       .favoritesDropdown_product__price {
@@ -795,13 +795,13 @@ header {
                         font-weight: normal;
                         font-size: 12px;
                         line-height: 15px;
-                        color: #d6d6d6;
+                        color: $colorDark;
                         .favoritesDropdown_product__priceValue {
                           font-style: normal;
                           font-weight: normal;
                           font-size: 12px;
                           line-height: 15px;
-                          color: #d6d6d6;
+                          color: $colorDark;
                           margin-right: 3px;
                         }
                       }
@@ -820,7 +820,7 @@ header {
                       font-weight: normal;
                       font-size: 12px;
                       line-height: 15px;
-                      color: #d6d6d6;
+                      color: $colorDark;
                       opacity: 0;
                       transform: scale(0);
                       svg {
@@ -874,7 +874,7 @@ header {
             width: 100%;
             box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
             border-radius: 5px;
-            background: $colorDark;
+            background: $colorLight;
             padding: 0px 30px;
             max-height: 0px;
             transition: 0.2s all linear;
@@ -897,7 +897,7 @@ header {
                   font-size: 24px;
                   line-height: 29px;
                   text-align: center;
-                  color: $colorLight;
+                  color: $colorDark;
                 }
               }
               .navigation_profileDropdownNoAuthorized__form {
@@ -912,7 +912,7 @@ header {
                   background: none;
                   border: none;
                   outline: none;
-                  border: 1px solid $colorLight;
+                  border: 1px solid $colorDark;
                   box-sizing: border-box;
                   border-radius: 5px;
                   width: 100%;
@@ -920,10 +920,10 @@ header {
                   font-weight: normal;
                   font-size: 14px;
                   line-height: 17px;
-                  color: $colorLight;
+                  color: $colorDark;
                   padding: 11px 20px;
                   &::placeholder {
-                    color: $colorLight;
+                    color: $colorDark;
                   }
                 }
                 span.signInError {
@@ -946,7 +946,7 @@ header {
                   font-size: 12px;
                   line-height: 15px;
                   text-align: center;
-                  color: #d6d6d6;
+                  color: $colorDark;
                   margin-top: 10px;
                   width: 100%;
                   text-align: center;
@@ -998,7 +998,7 @@ header {
                     font-weight: 500;
                     font-size: 20px;
                     line-height: 24px;
-                    color: $colorLight;
+                    color: $colorDark;
                   }
                   span.navigation_profileDropdownAuthorizedTop__bonuses {
                     margin-top: 5px;
@@ -1006,7 +1006,7 @@ header {
                     font-weight: normal;
                     font-size: 14px;
                     line-height: 17px;
-                    color: #d6d6d6;
+                    color: $colorDark;
                   }
                 }
               }
@@ -1036,7 +1036,7 @@ header {
                       font-weight: normal;
                       font-size: 16px;
                       line-height: 20px;
-                      color: $colorLight;
+                      color: $colorDark;
                     }
                     &:hover {
                       a {
@@ -1077,7 +1077,7 @@ header {
             position: absolute;
             right: 0px;
             box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
-            background: $colorDark;
+            background: $colorLight;
             border-radius: 5px;
             padding: 0px 20px 0px 20px;
             max-width: 470px;
@@ -1117,7 +1117,7 @@ header {
                   font-size: 10px;
                   line-height: 12px;
 
-                  color: #d6d6d6;
+                  color: $colorDark;
                 }
                 .basket_clear {
                   border: none;
@@ -1127,7 +1127,7 @@ header {
                   font-size: 14px;
                   line-height: 17px;
 
-                  color: $colorLight;
+                  color: $colorDark;
                   cursor: pointer;
                 }
               }
@@ -1194,7 +1194,7 @@ header {
                       font-weight: normal;
                       font-size: 16px;
                       line-height: 20px;
-                      color: $colorLight;
+                      color: $colorDark;
                       padding: 0;
                     }
                     .basketDropdown_productDescription_quntityPrice {
@@ -1208,13 +1208,13 @@ header {
                         font-weight: normal;
                         font-size: 12px;
                         line-height: 15px;
-                        color: #d6d6d6;
+                        color: $colorDark;
                         .basketDropdown_product__priceValue {
                           font-style: normal;
                           font-weight: normal;
                           font-size: 12px;
                           line-height: 15px;
-                          color: #d6d6d6;
+                          color: $colorDark;
                           margin-right: 3px;
                         }
                       }
@@ -1233,7 +1233,7 @@ header {
                       font-weight: normal;
                       font-size: 12px;
                       line-height: 15px;
-                      color: #d6d6d6;
+                      color: $colorDark;
                       opacity: 0;
                       z-index: -10;
                       transform: scale(0);
@@ -1276,7 +1276,7 @@ header {
                   line-height: 24px;
                   text-align: right;
 
-                  color: $colorLight;
+                  color: $colorDark;
                 }
               }
               .basket_block__bottom {
@@ -1309,7 +1309,7 @@ header {
           justify-content: space-between;
           box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
           border-radius: 5px;
-          background: $colorDark;
+          background: $colorLight;
           position: absolute;
           top: 100%;
           right: 0px;
@@ -1328,7 +1328,7 @@ header {
               font-size: 24px;
               line-height: 29px;
               text-align: center;
-              color: $colorLight;
+              color: $colorDark;
             }
           }
           .forgotPassword_block__form {
@@ -1343,18 +1343,18 @@ header {
               background: none;
               border: none;
               outline: none;
-              border: 1px solid $colorLight;
+              border: 1px solid $colorDark;
               box-sizing: border-box;
               border-radius: 5px;
               font-style: normal;
               font-weight: normal;
               font-size: 14px;
               line-height: 17px;
-              color: $colorLight;
+              color: $colorDark;
               width: 100%;
               padding: 11px 20px;
               &::placeholder {
-                color: $colorLight;
+                color: $colorDark;
               }
             }
             input.error {

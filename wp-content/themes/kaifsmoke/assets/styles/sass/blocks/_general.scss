@@ -1,12 +1,12 @@
-$colorDark: #1d1d1b;
+$colorDark: #000000;
 $colorGrey: #6b6b63;
-$colorPrimary: #ef7d00;
+$colorPrimary: #F40500;
 $colorLight: #fff;
 $colorError: #e9420d;
 
 $colors: (
-  primary: #ef7d00,
-  dark: #1d1d1b,
+  primary: #F40500,
+  dark: #000000,
   grey: #6b6b63,
   light: #ffffff,
   error: #e9420d,
@@ -542,7 +542,7 @@ svg {
 }
 
 .placeChooseActive .mobileShops_blockContentListShop__address {
-  color: #ef7d00 !important;
+  color: $colorPrimary !important;
 }
 
 .hideStar {

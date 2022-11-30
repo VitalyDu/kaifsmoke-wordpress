@@ -44,7 +44,7 @@ defined( 'ABSPATH' ) || exit;
     width: auto;
     border-radius: 5px;
     color: #fff;
-    background: #ef7d00;
+    background: #F40500;
     padding: 10px 20px;
   }
 

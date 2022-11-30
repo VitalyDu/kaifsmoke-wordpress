@@ -18,7 +18,7 @@ get_header();
                                 <span class="carousel_item__address">
                                     <?php the_sub_field('desc'); ?>
                                 </span>
-                                <a href="<?php the_sub_field('link'); ?>" class="carousel_item__link btn primary l">
+                                <a href="<?php the_sub_field('link'); ?>" class="carousel_item__link btn tertiary l">
                                     Подробнее
                                 </a>
                             </div>
@@ -27,8 +27,7 @@ get_header();
                 </div>
             <?php endif; ?>
             <div class="promo_block__otherLinks">
-                <a href="/shops" class="otherLinks_block promoShops">
-                    <div class="otherLinks_block__gradient"></div>
+                <a href="/shops" class="otherLinks_block">
                     <div class="otherLinks_block__icon">
                         <img src="/wp-content/themes/kaifsmoke/assets/images/promoShopIcon.svg" alt="магазины" lazyload>
                     </div>
@@ -38,12 +37,11 @@ get_header();
                     </div>
                     <div class="otherLinks_block_arrow">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.24654 16.4463C9.05128 16.6415 9.05128 16.9581 9.24654 17.1534C9.44181 17.3486 9.75839 17.3486 9.95365 17.1534L9.24654 16.4463ZM14.4001 11.9998L14.7537 12.3534L15.1072 11.9998L14.7537 11.6463L14.4001 11.9998ZM9.95365 6.84625C9.75839 6.65099 9.44181 6.65099 9.24654 6.84625C9.05128 7.04151 9.05128 7.3581 9.24654 7.55336L9.95365 6.84625ZM9.95365 17.1534L14.7537 12.3534L14.0465 11.6463L9.24654 16.4463L9.95365 17.1534ZM14.7537 11.6463L9.95365 6.84625L9.24654 7.55336L14.0465 12.3534L14.7537 11.6463Z" fill="white" />
+                            <path d="M9.24654 16.4463C9.05128 16.6415 9.05128 16.9581 9.24654 17.1534C9.44181 17.3486 9.75839 17.3486 9.95365 17.1534L9.24654 16.4463ZM14.4001 11.9998L14.7537 12.3534L15.1072 11.9998L14.7537 11.6463L14.4001 11.9998ZM9.95365 6.84625C9.75839 6.65099 9.44181 6.65099 9.24654 6.84625C9.05128 7.04151 9.05128 7.3581 9.24654 7.55336L9.95365 6.84625ZM9.95365 17.1534L14.7537 12.3534L14.0465 11.6463L9.24654 16.4463L9.95365 17.1534ZM14.7537 11.6463L9.95365 6.84625L9.24654 7.55336L14.0465 12.3534L14.7537 11.6463Z" fill="#000000" />
                         </svg>
                     </div>
                 </a>
-                <a href="/opt" class="otherLinks_block promoBoxes">
-                    <div class="otherLinks_block__gradient"></div>
+                <a href="/opt" class="otherLinks_block">
                     <div class="otherLinks_block__icon">
                         <img src="/wp-content/themes/kaifsmoke/assets/images/promoBoxIcon.svg" alt="Опт" lazyload>
                     </div>
@@ -53,12 +51,11 @@ get_header();
                     </div>
                     <div class="otherLinks_block_arrow">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.24654 16.4463C9.05128 16.6415 9.05128 16.9581 9.24654 17.1534C9.44181 17.3486 9.75839 17.3486 9.95365 17.1534L9.24654 16.4463ZM14.4001 11.9998L14.7537 12.3534L15.1072 11.9998L14.7537 11.6463L14.4001 11.9998ZM9.95365 6.84625C9.75839 6.65099 9.44181 6.65099 9.24654 6.84625C9.05128 7.04151 9.05128 7.3581 9.24654 7.55336L9.95365 6.84625ZM9.95365 17.1534L14.7537 12.3534L14.0465 11.6463L9.24654 16.4463L9.95365 17.1534ZM14.7537 11.6463L9.95365 6.84625L9.24654 7.55336L14.0465 12.3534L14.7537 11.6463Z" fill="white" />
+                            <path d="M9.24654 16.4463C9.05128 16.6415 9.05128 16.9581 9.24654 17.1534C9.44181 17.3486 9.75839 17.3486 9.95365 17.1534L9.24654 16.4463ZM14.4001 11.9998L14.7537 12.3534L15.1072 11.9998L14.7537 11.6463L14.4001 11.9998ZM9.95365 6.84625C9.75839 6.65099 9.44181 6.65099 9.24654 6.84625C9.05128 7.04151 9.05128 7.3581 9.24654 7.55336L9.95365 6.84625ZM9.95365 17.1534L14.7537 12.3534L14.0465 11.6463L9.24654 16.4463L9.95365 17.1534ZM14.7537 11.6463L9.95365 6.84625L9.24654 7.55336L14.0465 12.3534L14.7537 11.6463Z" fill="#000000" />
                         </svg>
                     </div>
                 </a>
-                <a href="/contact#socialLinks" class="otherLinks_block promoSocials">
-                    <div class="otherLinks_block__gradient"></div>
+                <a href="/contact#socialLinks" class="otherLinks_block">
                     <div class="otherLinks_block__icon">
                         <img src="/wp-content/themes/kaifsmoke/assets/images/promoSocialIcon.svg" alt="Соц. сети" lazyload>
                     </div>
@@ -68,7 +65,7 @@ get_header();
                     </div>
                     <div class="otherLinks_block_arrow">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.24654 16.4463C9.05128 16.6415 9.05128 16.9581 9.24654 17.1534C9.44181 17.3486 9.75839 17.3486 9.95365 17.1534L9.24654 16.4463ZM14.4001 11.9998L14.7537 12.3534L15.1072 11.9998L14.7537 11.6463L14.4001 11.9998ZM9.95365 6.84625C9.75839 6.65099 9.44181 6.65099 9.24654 6.84625C9.05128 7.04151 9.05128 7.3581 9.24654 7.55336L9.95365 6.84625ZM9.95365 17.1534L14.7537 12.3534L14.0465 11.6463L9.24654 16.4463L9.95365 17.1534ZM14.7537 11.6463L9.95365 6.84625L9.24654 7.55336L14.0465 12.3534L14.7537 11.6463Z" fill="white" />
+                            <path d="M9.24654 16.4463C9.05128 16.6415 9.05128 16.9581 9.24654 17.1534C9.44181 17.3486 9.75839 17.3486 9.95365 17.1534L9.24654 16.4463ZM14.4001 11.9998L14.7537 12.3534L15.1072 11.9998L14.7537 11.6463L14.4001 11.9998ZM9.95365 6.84625C9.75839 6.65099 9.44181 6.65099 9.24654 6.84625C9.05128 7.04151 9.05128 7.3581 9.24654 7.55336L9.95365 6.84625ZM9.95365 17.1534L14.7537 12.3534L14.0465 11.6463L9.24654 16.4463L9.95365 17.1534ZM14.7537 11.6463L9.95365 6.84625L9.24654 7.55336L14.0465 12.3534L14.7537 11.6463Z" fill="#000000" />
                         </svg>
                     </div>
                 </a>
@@ -97,7 +94,7 @@ get_header();
                 <?php endif; ?>
             </div>
             <div class="catalog_block__showMore">
-                <a href="/catalog" class="btn xl secondary">Перейти ко всем категориям</a>
+                <a href="/catalog" class="btn xl primary">Перейти ко всем категориям</a>
             </div>
         </div>
         <div class="mobileCatalog_block">
@@ -221,7 +218,7 @@ get_header();
                                 <span class="carousel_item__address">
                                     <?php the_sub_field('desc'); ?>
                                 </span>
-                                <a href="<?php the_sub_field('link'); ?>" class="carousel_item__link btn primary l">
+                                <a href="<?php the_sub_field('link'); ?>" class="carousel_item__link btn tertiary l">
                                     Подробнее
                                 </a>
                             </div>

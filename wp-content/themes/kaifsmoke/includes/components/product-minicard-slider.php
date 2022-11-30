@@ -79,19 +79,19 @@ $average = $post->get_average_rating();
         if (is_user_logged_in()) { ?>
             <? if (strpos(get_user_meta(get_current_user_id(), 'cart', true), $post->get_id() . ',') !== false) {
                 ?>
-                <a href="/reservation" class="btn quaternary active m goToCart_btn"
+                <a href="/reservation" class="btn tertiary active m goToCart_btn"
                    data-productId="<? echo $post->get_id(); ?>" data-productName="<?= $post->get_title() ?>">Список
                     бронирования</a>
                 <?
             } elseif ($post->is_in_stock()) { ?>
-                <button class="btn quaternary m addToCardBtn" data-productId="<? echo $post->get_id(); ?>"
+                <button class="btn tertiary m addToCardBtn" data-productId="<? echo $post->get_id(); ?>"
                         data-productName="<?= $post->get_title() ?>">Забронировать
                 </button>
             <? } else { ?>
-                <a href="<?= $post->get_permalink() ?>" class="btn quaternary m">Посмотреть</a>
+                <a href="<?= $post->get_permalink() ?>" class="btn tertiary m">Посмотреть</a>
             <?php } ?>
         <? } else { ?>
-            <button class="btn quaternary m addToCartNoAuth_btn">Забронировать</button>
+            <button class="btn tertiary m addToCartNoAuth_btn">Забронировать</button>
         <? } ?>
     </div>
 </div>

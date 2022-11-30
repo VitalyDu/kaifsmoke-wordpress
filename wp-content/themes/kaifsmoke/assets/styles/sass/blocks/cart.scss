@@ -299,7 +299,7 @@
               align-items: center;
               text-align: right;
               text-decoration-line: underline;
-              color: #ef7d00;
+              color: $colorPrimary;
               &:last-of-type {
                 margin-bottom: 0;
               }
@@ -340,7 +340,7 @@
               label {
                 height: 30px;
                 width: 60px;
-                background: #ef7d00;
+                background: $colorPrimary;
                 box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
                 border-radius: 15px;
                 position: relative;
@@ -490,7 +490,7 @@
           label {
             height: 30px;
             width: 60px;
-            background: #ef7d00;
+            background: $colorPrimary;
             box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
             border-radius: 15px;
             position: relative;

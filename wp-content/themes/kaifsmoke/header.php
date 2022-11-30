@@ -519,7 +519,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                     <li class="navigation_favorites">
                         <a itemprop="url" href="/favorites">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.2001 8.61987C19.2001 12.2199 12 18.7314 12 18.7314C12 18.7314 4.80005 12.2199 4.80005 8.61987C4.80005 4.69111 9.60005 3.16234 12 7.0911C14.4 3.16234 19.2 5.01987 19.2001 8.61987Z" stroke="#fff" />
+                                <path d="M19.2001 8.61987C19.2001 12.2199 12 18.7314 12 18.7314C12 18.7314 4.80005 12.2199 4.80005 8.61987C4.80005 4.69111 9.60005 3.16234 12 7.0911C14.4 3.16234 19.2 5.01987 19.2001 8.61987Z" stroke="#1D1D1B" />
                             </svg>
                         </a>
                         <div class="navigation_favorites__dropdown">
@@ -545,8 +545,8 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                     <li class="navigation_profile">
                         <a itemprop="url" href="<? if (!is_user_logged_in()) { ?>/signin<? } else { ?>my-account<? } ?>">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8Z" stroke="#fff" />
-                                <path d="M12 13C8.68629 13 6 15.6863 6 19H18C18 15.6863 15.3137 13 12 13Z" stroke="#fff" />
+                                <path d="M15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8Z" stroke="#1D1D1B" />
+                                <path d="M12 13C8.68629 13 6 15.6863 6 19H18C18 15.6863 15.3137 13 12 13Z" stroke="#1D1D1B" />
                             </svg>
                         </a>
                         <div class="navigation_profile__dropdown">
@@ -606,7 +606,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                     <li class="navigation_basket">
                         <a itemprop="url" href="/reservation">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.9998 10H4M17.9998 10H18.9998V8H15.4998M17.9998 10L17.6226 13.0176M4 10L5 18H14.126M4 10H3V8H6.49976M7.5 12.5L7.99976 15.5M10.9998 15.5V12.5M14.5 12.5L13.9998 15.5M6.49976 8L8.49976 4M6.49976 8H15.4998M15.4998 8L13.4998 4M18 14.5V17H19.5M17.6226 13.0176C15.5904 13.2078 14 14.9181 14 17C14 17.3453 14.0438 17.6804 14.126 18M17.6226 13.0176C17.7468 13.0059 17.8727 13 18 13C20.2091 13 22 14.7909 22 17C22 19.2091 20.2091 21 18 21C16.1362 21 14.5701 19.7252 14.126 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M17.9998 10H4M17.9998 10H18.9998V8H15.4998M17.9998 10L17.6226 13.0176M4 10L5 18H14.126M4 10H3V8H6.49976M7.5 12.5L7.99976 15.5M10.9998 15.5V12.5M14.5 12.5L13.9998 15.5M6.49976 8L8.49976 4M6.49976 8H15.4998M15.4998 8L13.4998 4M18 14.5V17H19.5M17.6226 13.0176C15.5904 13.2078 14 14.9181 14 17C14 17.3453 14.0438 17.6804 14.126 18M17.6226 13.0176C17.7468 13.0059 17.8727 13 18 13C20.2091 13 22 14.7909 22 17C22 19.2091 20.2091 21 18 21C16.1362 21 14.5701 19.7252 14.126 18" stroke="#1D1D1B" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </a>
                         <div class="navigation_basket__dropdown">

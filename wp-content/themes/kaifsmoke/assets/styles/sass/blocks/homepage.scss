@@ -49,7 +49,7 @@
               font-weight: 500;
               font-size: 29px;
               line-height: 35px;
-              color: $colorLight;
+              color: $colorDark;
             }
             .carousel_subtitle {
               font-style: normal;
@@ -65,7 +65,7 @@
               font-weight: 500;
               font-size: 14px;
               line-height: 17px;
-              color: $colorLight;
+              color: $colorDark;
               max-width: 240px;
             }
             a.carousel_item__link {
@@ -140,15 +140,6 @@
           grid-column-gap: 30px;
           grid-row-gap: 30px;
         }
-        .promoShops {
-          background: url("../images/promoShopBg1.png");
-        }
-        .promoBoxes {
-          background: url("../images/promoBoxBg1.jfif");
-        }
-        .promoSocials {
-          background: url("../images/promoSocialBg1.png");
-        }
         .otherLinks_block {
           position: relative;
           background-size: 100%;
@@ -162,33 +153,9 @@
           box-sizing: border-box;
           box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
           border-radius: 5px;
-          .otherLinks_block__gradient {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                299.21deg,
-                #1f1f1f 6.52%,
-                rgba(31, 31, 31, 0.15) 19.66%
-              ),
-              linear-gradient(
-                121.77deg,
-                #1f1f1f 15.2%,
-                rgba(31, 31, 31, 0.75) 37.87%,
-                rgba(31, 31, 31, 0) 63.27%
-              ),
-              linear-gradient(
-                0deg,
-                rgba(29, 29, 27, 0.5),
-                rgba(29, 29, 27, 0.5)
-              );
-            z-index: 1;
-            border-radius: 5px;
-          }
           .otherLinks_block__icon {
             z-index: 2;
+            filter: invert(1);
             img {
               width: 24px;
               height: 24px;
@@ -205,7 +172,7 @@
               font-weight: bold;
               font-size: 18px;
               line-height: 22px;
-              color: #ef7d00;
+              color: $colorPrimary;
             }
             .otherLinks_subtitle {
               font-style: normal;
@@ -213,7 +180,7 @@
               font-size: 14px;
               line-height: 17px;
 
-              color: $colorLight;
+              color: $colorDark;
             }
           }
           .otherLinks_block_arrow {
@@ -251,7 +218,7 @@
         margin-top: 50px;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
         grid-column-gap: 30px;
         grid-row-gap: 30px;
         .catalog_items__item {
@@ -275,6 +242,7 @@
             color: $colorDark;
             text-align: center;
             transition: 0.2s all linear;
+            margin-top: 12px;
           }
           &:hover {
             h4,
@@ -369,11 +337,11 @@
         &.active {
           svg {
             rect {
-              stroke: #ef7d00;
+              stroke: $colorPrimary;
             }
           }
           span {
-            color: #ef7d00;
+            color: $colorPrimary;
           }
         }
       }
@@ -407,15 +375,15 @@
           &:hover {
             svg {
               path {
-                stroke: #ef7d00;
+                stroke: $colorPrimary;
               }
             }
           }
           &.active {
             svg {
-              fill: #ef7d00;
+              fill: $colorPrimary;
               path {
-                stroke: #ef7d00;
+                stroke: $colorPrimary;
               }
             }
           }
@@ -423,9 +391,9 @@
         &.active {
           button {
             svg {
-              fill: #ef7d00;
+              fill: $colorPrimary;
               path {
-                stroke: #ef7d00;
+                stroke: $colorPrimary;
               }
             }
           }
@@ -565,8 +533,8 @@
         //   color: $colorDark;
         //   transition: 0.2s all linear;
         //   &:hover {
-        //     background: #ef7d00;
-        //     border-color: #ef7d00;
+        //     background: $colorPrimary;
+        //     border-color: $colorPrimary;
         //     color: #fff;
         //   }
         //   @media (max-width: 599px) {
@@ -593,8 +561,8 @@
         //   color: $colorPrimary;
         //   transition: 0.2s all linear;
         //   &:hover {
-        //     background: #ef7d00;
-        //     border-color: #ef7d00;
+        //     background: $colorPrimary;
+        //     border-color: $colorPrimary;
         //     color: #fff;
         //   }
         //   @media (max-width: 599px) {
@@ -676,7 +644,7 @@
               font-weight: 500;
               font-size: 29px;
               line-height: 35px;
-              color: $colorLight;
+              color: $colorDark;
             }
             .carousel_subtitle {
               font-style: normal;
@@ -692,7 +660,7 @@
               font-weight: 500;
               font-size: 14px;
               line-height: 17px;
-              color: $colorLight;
+              color: $colorDark;
               max-width: 309px;
             }
             a.carousel_item__link {
@@ -786,7 +754,7 @@
                 font-weight: 600;
                 font-size: 18px;
                 line-height: 22px;
-                color: $colorLight;
+                color: $colorDark;
               }
               .carousel_subtitle {
                 font-style: normal;
@@ -853,8 +821,6 @@
             width: 100%;
             padding: 10px 15px;
             justify-content: flex-start;
-            .otherLinks_block__gradient {
-            }
             .otherLinks_block__icon {
               margin-right: 15px;
               img {
@@ -960,7 +926,7 @@
                 font-weight: 600;
                 font-size: 18px;
                 line-height: 22px;
-                color: $colorLight;
+                color: $colorDark;
               }
               .carousel_subtitle {
                 font-style: normal;

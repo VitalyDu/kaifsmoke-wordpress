@@ -29,7 +29,7 @@ if (!defined('ABSPATH')) {
     if (is_user_logged_in()) {
         if (strpos(get_user_meta(get_current_user_id(), 'cart', true), $product->get_id() . ',') !== false) {
     ?>
-            <a href="/cart" class="btn quaternary active m goToCart_btn" data-productId="<? echo $product->get_id(); ?>" data-productName="<?= $product->get_title() ?>">Список бронирования</a>
+            <a href="/cart" class="btn tertiary active m goToCart_btn" data-productId="<? echo $product->get_id(); ?>" data-productName="<?= $product->get_title() ?>">Список бронирования</a>
         <?
         } elseif ($product->is_in_stock()) {
             // echo apply_filters(
@@ -46,15 +46,15 @@ if (!defined('ABSPATH')) {
             //     $args
             // );
         ?>
-            <button class="btn quaternary m addToCardBtn" data-productId="<? echo $product->get_id(); ?>" data-productName="<?= $product->get_title() ?>">Забронировать</button>
+            <button class="btn tertiary m addToCardBtn" data-productId="<? echo $product->get_id(); ?>" data-productName="<?= $product->get_title() ?>">Забронировать</button>
         <?
         } else { ?>
-            <a href="<?= $product->get_permalink() ?>" class="btn quaternary m inBasketButton">Посмотреть</a>
+            <a href="<?= $product->get_permalink() ?>" class="btn tertiary m inBasketButton">Посмотреть</a>
         <?php
         }
     } else {
         ?>
-        <button class="btn quaternary m addToCartNoAuth_btn">Забронировать</button>
+        <button class="btn tertiary m addToCartNoAuth_btn">Забронировать</button>
     <?
     }
     ?>

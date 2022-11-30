@@ -211,8 +211,8 @@
         border-radius: 5px;
         padding: 22px 83px;
         &:hover {
-          border: 1px solid #ef7d00;
-          color: #ef7d00;
+          border: 1px solid $colorPrimary;
+          color: $colorPrimary;
           background: $colorLight;
         }
         @media (max-width: 1169px) {
