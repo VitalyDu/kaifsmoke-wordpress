@@ -233,6 +233,9 @@ header {
                 span.category_icon {
                   margin-right: 20px;
                   svg {
+                    path {
+                      stroke: $colorDark;
+                    }
                   }
                 }
                 span.category_name {
@@ -480,6 +483,7 @@ header {
         }
       }
       .header_block__search {
+        margin-left: 75px;
         input {
           font-style: normal;
           font-weight: normal;
@@ -506,6 +510,7 @@ header {
         }
       }
       a.logo {
+        margin-left: 100px;
         img {
           max-width: 306px;
           width: 100%;
@@ -519,6 +524,7 @@ header {
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
+        margin-left: auto;
         li {
           font-style: normal;
           font-weight: normal;
@@ -1009,7 +1015,8 @@ header {
                   width: 50px;
                   height: 50px;
                   margin-right: 10px;
-                  filter: invert(1%) sepia(0%) saturate(2525%) hue-rotate(152deg) brightness(96%) contrast(80%);
+                  filter: invert(1%) sepia(0%) saturate(2525%)
+                    hue-rotate(152deg) brightness(96%) contrast(80%);
                   img {
                     max-width: 100%;
                     width: 100%;

@@ -624,25 +624,25 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      button {
-        max-width: 270px;
-        width: 100%;
-        height: 60px;
-        background: $colorPrimary;
-        border: 1px solid $colorPrimary;
-        border-radius: 5px;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 20px;
-        text-align: center;
-        color: $colorLight;
-        transition: 0.2s all linear;
-        &:hover {
-          background: none;
-          color: $colorPrimary;
-        }
-      }
+      // button {
+      //   max-width: 270px;
+      //   width: 100%;
+      //   height: 60px;
+      //   background: $colorPrimary;
+      //   border: 1px solid $colorPrimary;
+      //   border-radius: 5px;
+      //   font-style: normal;
+      //   font-weight: 600;
+      //   font-size: 14px;
+      //   line-height: 20px;
+      //   text-align: center;
+      //   color: $colorLight;
+      //   transition: 0.2s all linear;
+      //   &:hover {
+      //     background: none;
+      //     color: $colorPrimary;
+      //   }
+      // }
     }
   }
   .form_sent {
