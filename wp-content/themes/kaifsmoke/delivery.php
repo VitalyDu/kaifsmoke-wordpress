@@ -64,7 +64,7 @@ get_header();
     </div>
     <div class="form_sent">
         <span class="label">Отправлено!</span>
-        <img src="/wp-content/themes/vapezone/assets/images/okey.png" alt="Okey">
+        <img src="/wp-content/themes/kaifsmoke/assets/images/okey.png" alt="Okey">
         <span class="description">Мы свяжемся с Вами в ближайшее время</span>
     </div>
 </div>

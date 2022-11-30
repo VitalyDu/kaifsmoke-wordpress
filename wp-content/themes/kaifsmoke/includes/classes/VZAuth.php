@@ -238,7 +238,7 @@ class VZAuth
         $headers = 'From: ' . get_bloginfo('admin_email') . "\r\n" .
             'Reply-To: ' . get_bloginfo('admin_email') . "\r\n" .
             'Content-type: text/html; charset=utf-8' . "\r\n";
-        $message = $hello . 'Для восстановления пароля перейдите, пожалуйста, по ссылке: https://vapezone.ru/password-reset/?reset_key=' . $reset_key . '&email=' . $_POST['login'];
+        $message = $hello . 'Для восстановления пароля перейдите, пожалуйста, по ссылке: https://kaifsmoke.ru/password-reset/?reset_key=' . $reset_key . '&email=' . $_POST['login'];
 
         $out['out']['send_status'] = wp_mail($_POST['login'], $subject, $message, $headers);
 
@@ -279,7 +279,7 @@ class VZAuth
         $headers = 'From: ' . get_bloginfo('admin_email') . "\r\n" .
             'Reply-To: ' . get_bloginfo('admin_email') . "\r\n" .
             'Content-type: text/html; charset=utf-8' . "\r\n";
-        $message = $hello . 'Новый пароль от вашего аккуанта на vapezone.ru:  ' . $_POST['password'] . '<br>По любым вопросам пишите нам на адрес: ' . get_bloginfo('admin_email');
+        $message = $hello . 'Новый пароль от вашего аккуанта на kaifsmoke.ru:  ' . $_POST['password'] . '<br>По любым вопросам пишите нам на адрес: ' . get_bloginfo('admin_email');
 
         $out['out']['send_status'] = wp_mail($_POST['login'], $subject, $message, $headers);
 

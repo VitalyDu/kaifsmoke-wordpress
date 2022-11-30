@@ -31,7 +31,7 @@ if (!defined('ABSPATH')) {
 				echo $before;
 
 				if (!empty($crumb[1]) && sizeof($breadcrumb) !== $key + 1) {
-				    if (!in_array($crumb[0], ['VAPE', 'Vape Zone - Каталог']))
+				    if (!in_array($crumb[0], ['VAPE', 'Vape Zone - Каталог', '#VAPE продукция']))
 					    echo '<li><a href="' . esc_url($crumb[1]) . '">' . esc_html($crumb[0]) . '</a></li>';
 				} else {
 					echo '<li><a href="#">' . esc_html($crumb[0]) . '</a></li>';

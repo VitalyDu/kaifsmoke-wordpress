@@ -131,7 +131,7 @@ remove_action('woocommerce_single_product_summary', 'WC_Structured_Data::generat
                 }
                 ?>
                 <div class="productCard_stockStatus">
-                    <img src="/wp-content/themes/vapezone/assets/images/icons/box.png" alt="">
+                    <img src="/wp-content/themes/kaifsmoke/assets/images/icons/box.png" alt="">
                     <span class="productCard_stockStatus__text">
                         <?php if ($main_sklad <= 0 && $shops_count <= 0) { ?>
                             Отсутствует на складе и в магазине
@@ -197,7 +197,7 @@ remove_action('woocommerce_single_product_summary', 'WC_Structured_Data::generat
     <div class="container">
         <div class="advantages_block">
             <div class="advantages_block__advantage">
-                <div class="advantage_icon"><img src="/wp-content/themes/vapezone/assets/images/icons/deliveryCar.png" alt=""></div>
+                <div class="advantage_icon"><img src="/wp-content/themes/kaifsmoke/assets/images/icons/deliveryCar.png" alt=""></div>
                 <div class="advantage_title">Бесплатная</div>
                 <div class="advantage_description">Доставка в магазин</div>
                 <div class="advantage_fullDescription">
@@ -205,7 +205,7 @@ remove_action('woocommerce_single_product_summary', 'WC_Structured_Data::generat
                 </div>
             </div>
             <div class="advantages_block__advantage">
-                <div class="advantage_icon"><img src="/wp-content/themes/vapezone/assets/images/icons/bankCard.png" alt=""></div>
+                <div class="advantage_icon"><img src="/wp-content/themes/kaifsmoke/assets/images/icons/bankCard.png" alt=""></div>
                 <div class="advantage_title">Оплата</div>
                 <div class="advantage_description">В магазине при получении</div>
                 <div class="advantage_fullDescription">
@@ -213,7 +213,7 @@ remove_action('woocommerce_single_product_summary', 'WC_Structured_Data::generat
                 </div>
             </div>
             <div class="advantages_block__advantage">
-                <div class="advantage_icon"><img src="/wp-content/themes/vapezone/assets/images/icons/sertificates.png" alt=""></div>
+                <div class="advantage_icon"><img src="/wp-content/themes/kaifsmoke/assets/images/icons/sertificates.png" alt=""></div>
                 <div class="advantage_title">Сертифицированные</div>
                 <div class="advantage_description">Товары</div>
                 <div class="advantage_fullDescription">
@@ -221,7 +221,7 @@ remove_action('woocommerce_single_product_summary', 'WC_Structured_Data::generat
                 </div>
             </div>
             <div class="advantages_block__advantage">
-                <div class="advantage_icon"><img src="/wp-content/themes/vapezone/assets/images/icons/sale.png" alt=""></div>
+                <div class="advantage_icon"><img src="/wp-content/themes/kaifsmoke/assets/images/icons/sale.png" alt=""></div>
                 <div class="advantage_title">Лучшая</div>
                 <div class="advantage_description">Цена</div>
                 <div class="advantage_fullDescription">

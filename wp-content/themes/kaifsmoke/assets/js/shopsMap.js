@@ -34,8 +34,8 @@ $(document).ready(() => {
 
         objectManager.objects.options.set(
           "iconImageHref",
-          "../../wp-content/themes/vapezone/assets/images/icons/logoToMap.svg"
-        ); //vapezone.ru/wp-content/themes/vapezone/assets
+          "../../wp-content/themes/kaifsmoke/assets/images/icons/logoToMap.svg"
+        ); //kaifsmoke.ru/wp-content/themes/kaifsmoke/assets
 
         https: objectManager.clusters.options.set(
           "preset",
@@ -54,7 +54,7 @@ $(document).ready(() => {
             .id.split("-")[1];
         }
 
-        //"https://vapezone.ru/wp-json/controllers/v1/shops/"
+        //"https://kaifsmoke.ru/wp-json/controllers/v1/shops/"
 
         const shopList = [];
 
@@ -351,7 +351,7 @@ var addPopUp = () => {
   // try {
   //   var mainpopup = popup.querySelector(".popup__main");
 
-  //   if (window.location.hostname == "vapezone.pro") {
+  //   if (window.location.hostname == "kaifsmoke.pro") {
   //     $(mainpopup).append(`
   //     <div class = "popup__signin show" >
   //       <a href = "/login/?return_url=index.php" >Войти
@@ -415,14 +415,14 @@ var checkCookieForUser = (status) => {
   var checkUrlsLogin = () => {
     var url = window.location.href;
     var needsUrls = [
-      "https://vapezone.ru/signin/",
-      "https://vapezone.ru/signup/",
+      "https://kaifsmoke.ru/signin/",
+      "https://kaifsmoke.ru/signup/",
     ];
     if (
-      url.indexOf("https://vapezone.ru/signin/") != -1 ||
-      url.indexOf("https://vapezone.ru/signup/") != -1 ||
-      url.indexOf("https://test.vapezone.ru/signin/") != -1 ||
-      url.indexOf("https://test.vapezone.ru/signup/") != -1
+      url.indexOf("https://kaifsmoke.ru/signin/") != -1 ||
+      url.indexOf("https://kaifsmoke.ru/signup/") != -1 ||
+      url.indexOf("https://test.kaifsmoke.ru/signin/") != -1 ||
+      url.indexOf("https://test.kaifsmoke.ru/signup/") != -1
     ) {
       return;
     } else {

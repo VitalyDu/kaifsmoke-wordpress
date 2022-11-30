@@ -259,7 +259,7 @@ get_header();
     <div class="container">
         <div class="answerPage_block">
             <h1>Список бронирования пуст</h1>
-            <img src="/wp-content/themes/vapezone/assets/images/icons/notFoundHave.png" alt="">
+            <img src="/wp-content/themes/kaifsmoke/assets/images/icons/notFoundHave.png" alt="">
             <a class="onHomePage" href="/catalog">Перейти в каталог</a>
         </div>
     </div>

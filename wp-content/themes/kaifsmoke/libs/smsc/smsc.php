@@ -19,7 +19,7 @@ if (isset($_POST['code']) && isset($_POST['phoneNumber'])) {
     $code = $_POST['code'];
     $phone = $_POST['phoneNumber'];
     $text = preg_replace("/[^0-9]/", "", $code);
-    send_sms($phone, $text . " - Код подтверждения для vapezone.ru");
+    send_sms($phone, $text . " - Код подтверждения для kaifsmoke.ru");
     $balance = get_balance();
 }
 // ...

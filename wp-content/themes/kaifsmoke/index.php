@@ -30,7 +30,7 @@ get_header();
                 <a href="/shops" class="otherLinks_block promoShops">
                     <div class="otherLinks_block__gradient"></div>
                     <div class="otherLinks_block__icon">
-                        <img src="/wp-content/themes/vapezone/assets/images/promoShopIcon.svg" alt="магазины" lazyload>
+                        <img src="/wp-content/themes/kaifsmoke/assets/images/promoShopIcon.svg" alt="магазины" lazyload>
                     </div>
                     <div class="otherLinks_block__title">
                         <span class="otherLinks_title">Розничные</span>
@@ -45,7 +45,7 @@ get_header();
                 <a href="/opt" class="otherLinks_block promoBoxes">
                     <div class="otherLinks_block__gradient"></div>
                     <div class="otherLinks_block__icon">
-                        <img src="/wp-content/themes/vapezone/assets/images/promoBoxIcon.svg" alt="Опт" lazyload>
+                        <img src="/wp-content/themes/kaifsmoke/assets/images/promoBoxIcon.svg" alt="Опт" lazyload>
                     </div>
                     <div class="otherLinks_block__title">
                         <span class="otherLinks_title">Оптовый</span>
@@ -60,7 +60,7 @@ get_header();
                 <a href="/contact#socialLinks" class="otherLinks_block promoSocials">
                     <div class="otherLinks_block__gradient"></div>
                     <div class="otherLinks_block__icon">
-                        <img src="/wp-content/themes/vapezone/assets/images/promoSocialIcon.svg" alt="Соц. сети" lazyload>
+                        <img src="/wp-content/themes/kaifsmoke/assets/images/promoSocialIcon.svg" alt="Соц. сети" lazyload>
                     </div>
                     <div class="otherLinks_block__title">
                         <span class="otherLinks_title">Социальные</span>

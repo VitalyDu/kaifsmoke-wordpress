@@ -1,16 +1,16 @@
 <?php
 
-add_action('wp_enqueue_scripts', 'vapezone_styles');
-add_action('wp_enqueue_scripts', 'vapezone_jquery_script');
-add_action('wp_enqueue_scripts', 'vapezone_scripts');
-function vapezone_styles()
+add_action('wp_enqueue_scripts', 'kaifsmoke_styles');
+add_action('wp_enqueue_scripts', 'kaifsmoke_jquery_script');
+add_action('wp_enqueue_scripts', 'kaifsmoke_scripts');
+function kaifsmoke_styles()
 {
-    wp_enqueue_style('vapezone_css', get_template_directory_uri() . '/assets/css/main.min.css');
+    wp_enqueue_style('kaifsmoke_css', get_template_directory_uri() . '/assets/css/main.min.css');
     wp_enqueue_style('jquery_ui', '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css');
-    wp_enqueue_style('vapezone_style', get_stylesheet_uri());
+    wp_enqueue_style('kaifsmoke_style', get_stylesheet_uri());
 }
 
-function vapezone_jquery_script()
+function kaifsmoke_jquery_script()
 {
     wp_deregister_script('jquery');
     wp_register_script('jquery', get_template_directory_uri() . '/assets/js/app.min.js');
@@ -18,9 +18,9 @@ function vapezone_jquery_script()
     wp_enqueue_script('jquery');
 }
 
-function vapezone_scripts()
+function kaifsmoke_scripts()
 {
-    // wp_enqueue_script('vapezone_js', get_template_directory_uri() . '/assets/js/app.min.js', array(), null, false);
+    // wp_enqueue_script('kaifsmoke_js', get_template_directory_uri() . '/assets/js/app.min.js', array(), null, false);
     wp_enqueue_script('noty', get_template_directory_uri() . '/assets/js/noty.js', array(), null, true);
     wp_enqueue_script('jquery_cookie', '//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js', array(), null, true);
     wp_enqueue_script('phone_mask', get_template_directory_uri() . '/assets/js/maskPhone.js', array(), null, true);
@@ -44,8 +44,8 @@ function vapezone_scripts()
     wp_enqueue_script('shopsMap', get_template_directory_uri() . '/assets/js/shopsMap.js', array(), null, true);
 }
 
-add_action('wp_head', 'vapezone_ajaxurl');
-function vapezone_ajaxurl()
+add_action('wp_head', 'kaifsmoke_ajaxurl');
+function kaifsmoke_ajaxurl()
 {
 ?>
     <script>

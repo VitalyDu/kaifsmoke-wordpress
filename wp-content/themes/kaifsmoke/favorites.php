@@ -56,7 +56,7 @@ get_header();
     <div class="container">
         <div class="answerPage_block">
             <h1>Список избранного пуст</h1>
-            <img src="/wp-content/themes/vapezone/assets/images/icons/NotFoundHave.png" alt="Избранное">
+            <img src="/wp-content/themes/kaifsmoke/assets/images/icons/NotFoundHave.png" alt="Избранное">
             <a class="onHomePage btnOrange" href="/catalog">Перейти в каталог</a>
         </div>
     </div>

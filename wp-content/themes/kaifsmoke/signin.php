@@ -24,25 +24,25 @@ get_header();
         <div class="advantages_block">
             <div class="advantages_block__item">
                 <div class="backdrop"></div>
-                <img src="/wp-content/themes/vapezone/assets/images/icons/accelerated.png" alt="Оформление" class="icon">
+                <img src="/wp-content/themes/kaifsmoke/assets/images/icons/accelerated.png" alt="Оформление" class="icon">
                 <span class="advantage_title">Ускоренное</ы>
                 <span class="advantage_subtitle">Оформление заказов</span>
             </div>
             <div class="advantages_block__item">
                 <div class="backdrop"></div>
-                <img src="/wp-content/themes/vapezone/assets/images/icons/fast.png" alt="Быстро" class="icon">
+                <img src="/wp-content/themes/kaifsmoke/assets/images/icons/fast.png" alt="Быстро" class="icon">
                 <span class="advantage_title">Быстрое</span>
                 <span class="advantage_subtitle">Заполнение форм</span>
             </div>
             <div class="advantages_block__item">
                 <div class="backdrop"></div>
-                <img src="/wp-content/themes/vapezone/assets/images/icons/eye.png" alt="Отслеживание" class="icon">
+                <img src="/wp-content/themes/kaifsmoke/assets/images/icons/eye.png" alt="Отслеживание" class="icon">
                 <span class="advantage_title">Отслеживание</span>
                 <span class="advantage_subtitle">Заказов</span>
             </div>
             <div class="advantages_block__item">
                 <div class="backdrop"></div>
-                <img src="/wp-content/themes/vapezone/assets/images/icons/cashback.png" alt="Кэшбэк" class="icon">
+                <img src="/wp-content/themes/kaifsmoke/assets/images/icons/cashback.png" alt="Кэшбэк" class="icon">
                 <span class="advantage_title">Начисление бонусов</span>
                 <span class="advantage_subtitle">На товары без никотина</span>
             </div>

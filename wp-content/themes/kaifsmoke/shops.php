@@ -13,8 +13,8 @@ get_header();
             </div>
             <div class="breadcrumbs">
                 <ul>
-                    <li><a href="http://html.vapezone.pro/shops.html">Главная</a></li>
-                    <li><a href="http://html.vapezone.pro/shops.html">Магазины</a></li>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/shops/">Магазины</a></li>
                 </ul>
             </div>
 

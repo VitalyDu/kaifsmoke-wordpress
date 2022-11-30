@@ -1,20 +1,20 @@
 /*
-Theme Name: VapeZone
+Theme Name: kaifsmoke
 Theme URI: https://wordpress.org/themes/
-Author: the WordPress team / reworked by VapeZone
+Author: the WordPress team / reworked by kaifsmoke
 Author URI: https://wordpress.org/
-Description: VapeZone theme.
+Description: kaifsmoke theme.
 Requires at least: 5.9
 Tested up to: 5.9
 Requires PHP: 5.6
 Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: vapezone
+Text Domain: kaifsmoke
 Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
 
-VapeZone WordPress Theme, (C) 2021 WordPress.org
-VapeZone is distributed under the terms of the GNU GPL.
+kaifsmoke WordPress Theme, (C) 2021 WordPress.org
+kaifsmoke is distributed under the terms of the GNU GPL.
 */
 
 /*
@@ -87,7 +87,7 @@ a:active {
  * Alignment styles.
  * These rules are temporary, and should not be relied on or
  * modified too heavily by themes or plugins that build on
- * VapeZone. These are meant to be a precursor to
+ * kaifsmoke. These are meant to be a precursor to
  * a global solution provided by the Block Editor.
  *
  * Relevant issues:

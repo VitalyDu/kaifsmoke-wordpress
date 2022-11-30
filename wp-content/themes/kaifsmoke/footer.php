@@ -107,7 +107,7 @@
             </div>
             <div class="callBack_block__send form_block__send">
                 <h2>Отправлено!</h2>
-                <img src="/wp-content/themes/vapezone/assets/images/okey.png" alt="">
+                <img src="/wp-content/themes/kaifsmoke/assets/images/okey.png" alt="">
                 <span>Мы свяжемся с Вами в ближайшее время</span>
             </div>
         </div>
@@ -162,7 +162,7 @@
 
 
     #lb_button-chat::before {
-        content: url('/wp-content/themes/vapezone/assets/images/icons/chat.svg');
+        content: url('/wp-content/themes/kaifsmoke/assets/images/icons/chat.svg');
         position: absolute;
         top: 7px;
         left: 7px;

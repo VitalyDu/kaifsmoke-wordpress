@@ -11,7 +11,7 @@ get_header();
         <div class="answerPage_block pageNotFound">
             <h1>Ошибка 404</h1>
             <span>Такой страницы не существует :(</span>
-            <img src="/wp-content/themes/vapezone/assets/images/icons/NotFoundHave.png" alt="">
+            <img src="/wp-content/themes/kaifsmoke/assets/images/icons/NotFoundHave.png" alt="">
             <a class="onHomePage" href="/">На главную</a>
         </div>
     </div>

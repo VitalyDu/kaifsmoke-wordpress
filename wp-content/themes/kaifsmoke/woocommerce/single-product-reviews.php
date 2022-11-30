@@ -148,7 +148,7 @@ $average = ($comments_count > 0) ? $comments_rating_sum / $comments_count : 0;
                         </div>
                         <div class="content_reviewSend">
                             <span class="label">Отправлено!</span>
-                            <img src="/wp-content/themes/vapezone/assets/images/okey.png" alt="">
+                            <img src="/wp-content/themes/kaifsmoke/assets/images/okey.png" alt="">
                             <span class="description">Отзыв появится на странице после того, как пройдет модерацию</span>
                         </div>
                     </div>
@@ -228,7 +228,7 @@ $average = ($comments_count > 0) ? $comments_rating_sum / $comments_count : 0;
 									</div>
 									<div class="callBack_block__send form_block__send">
 										<h2>Отправлено!</h2>
-										<img src="/wp-content/themes/vapezone/assets/images/okey.png" alt="" />
+										<img src="/wp-content/themes/kaifsmoke/assets/images/okey.png" alt="" />
 										<span>Мы свяжемся с Вами в ближайшее время</span>
 									</div>
 								</div>

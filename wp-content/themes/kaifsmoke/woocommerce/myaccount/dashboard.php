@@ -50,7 +50,7 @@ $allowed_html = array(
 			<div class="accManagePage_block__top">
 				<div class="accManagePage_top__left">
 					<div class="accManagePage_top__userImg">
-						<img src="/wp-content/themes/vapezone/assets/images/icons/userIcon.png" alt="">
+						<img src="/wp-content/themes/kaifsmoke/assets/images/icons/userIcon.png" alt="">
 					</div>
 					<div class="accManagePage_top__userNameHaveBonuses">
 						<h3 class="accManagePage_top__userName">
@@ -95,7 +95,7 @@ $allowed_html = array(
 					<div class="field phoneVerificationStatus">
 						<label>Подтверждение номера</label>
 						<div class="phoneVerificationStatus_success">
-							<?php if ($userdata['phone_confirmed']) { ?><img src="/wp-content/themes/vapezone/assets/images/icons/subscribeAccess.png" alt="Success" class="phoneVerificationStatus_success__icon"><?php } ?>
+							<?php if ($userdata['phone_confirmed']) { ?><img src="/wp-content/themes/kaifsmoke/assets/images/icons/subscribeAccess.png" alt="Success" class="phoneVerificationStatus_success__icon"><?php } ?>
 							<span class="phoneVerificationStatus_success__label"><?php if ($userdata['phone_confirmed']) { ?>Номер подтвержден<?php } else { ?>Номер не подтвержден<?php } ?></span>
 						</div>
 					</div>
@@ -172,7 +172,7 @@ $allowed_html = array(
 						<div class="field phoneVerificationStatus success">
 							<label>Подтверждение номера</label>
 							<div class="phoneVerificationStatus_success">
-								<img src="/wp-content/themes/vapezone/assets/images/icons/subscribeAccess.png" alt="Success" class="phoneVerificationStatus_success__icon">
+								<img src="/wp-content/themes/kaifsmoke/assets/images/icons/subscribeAccess.png" alt="Success" class="phoneVerificationStatus_success__icon">
 								<span class="phoneVerificationStatus_success__label">Номер подтвержден</span>
 							</div>
 						</div>
@@ -189,7 +189,7 @@ $allowed_html = array(
 						<div class="field phoneVerificationStatus success">
 							<label>Подтверждение номера</label>
 							<div class="phoneVerificationStatus_success">
-								<img src="/wp-content/themes/vapezone/assets/images/icons/subscribeAccess.png" alt="Success" class="phoneVerificationStatus_success__icon">
+								<img src="/wp-content/themes/kaifsmoke/assets/images/icons/subscribeAccess.png" alt="Success" class="phoneVerificationStatus_success__icon">
 								<span class="phoneVerificationStatus_success__label">Номер подтвержден</span>
 							</div>
 						</div> -->

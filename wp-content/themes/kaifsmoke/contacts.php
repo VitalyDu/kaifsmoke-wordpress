@@ -19,7 +19,7 @@ get_header();
         <div class="contacts_blocks">
             <div class="contacts_blocks__onlineOrders contacts_blocks__item">
                 <div class="contacts_blocksItem__image">
-                    <img src="/wp-content/themes/vapezone/assets/images/contactsImages/onlineOrders.png" alt="Заказы">
+                    <img src="/wp-content/themes/kaifsmoke/assets/images/contactsImages/onlineOrders.png" alt="Заказы">
                 </div>
                 <div class="onlineOrders_content conctacts_blocksItem__content">
                     <span class="conctacts_blocksItem__title">Онлайн заказы</span>
@@ -44,14 +44,14 @@ get_header();
                         </div>
                         <div class="contactInf_item">
                             <span class="contactInf_item__name">По вопросам жалоб на сервис и продавцов:</span>
-                            <a class="contactInf_item__value" href="mailto:prodman@vapezone.ru">prodman@vapezone.ru</a>
+                            <a class="contactInf_item__value" href="mailto:prodman@kaifsmoke.ru">prodman@kaifsmoke.ru</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="contacts_blocks__optBlock contacts_blocks__item">
                 <div class="contacts_blocksItem__image">
-                    <img src="/wp-content/themes/vapezone/assets/images/contactsImages/optBlock.png" alt="Опт">
+                    <img src="/wp-content/themes/kaifsmoke/assets/images/contactsImages/optBlock.png" alt="Опт">
                 </div>
                 <div class="optBlock_content conctacts_blocksItem__content">
                     <span class="conctacts_blocksItem__title">Оптовый раздел</span>
@@ -63,7 +63,7 @@ get_header();
             </div>
             <div class="contacts_blocks__socialBlock contacts_blocks__item" id="socialLinks">
                 <div class="contacts_blocksItem__image">
-                    <img src="/wp-content/themes/vapezone/assets/images/contactsImages/socialBlock.png" alt="Соц. сети">
+                    <img src="/wp-content/themes/kaifsmoke/assets/images/contactsImages/socialBlock.png" alt="Соц. сети">
                 </div>
                 <div class="socialBlock_content conctacts_blocksItem__content">
                     <span class="conctacts_blocksItem__title">Социальные сети</span>
@@ -82,7 +82,7 @@ get_header();
             </div>
             <div class="contacts_blocks__vacancyBlock contacts_blocks__item">
                 <div class="contacts_blocksItem__image">
-                    <img src="/wp-content/themes/vapezone/assets/images/contactsImages/vacancies.png" alt="Вакансии">
+                    <img src="/wp-content/themes/kaifsmoke/assets/images/contactsImages/vacancies.png" alt="Вакансии">
                 </div>
                 <div class="vacancyBlock_content conctacts_blocksItem__content">
                     <span class="conctacts_blocksItem__title">Вакансии</span>
@@ -94,7 +94,7 @@ get_header();
             </div>
             <div class="contacts_blocks__rekvizitsBlock contacts_blocks__item">
                 <div class="contacts_blocksItem__image">
-                    <img src="/wp-content/themes/vapezone/assets/images/contactsImages/rekvizits.png" alt="Реквизиты">
+                    <img src="/wp-content/themes/kaifsmoke/assets/images/contactsImages/rekvizits.png" alt="Реквизиты">
                 </div>
                 <div class="rekvizitsBlock_content conctacts_blocksItem__content">
                     <span class="conctacts_blocksItem__title">Реквизиты</span>
@@ -152,7 +152,7 @@ get_header();
                 </div>
                 <div class="form_sent">
                     <span class="label">Отправлено!</span>
-                    <img src="/wp-content/themes/vapezone/assets/images/okey.png" alt="Okey">
+                    <img src="/wp-content/themes/kaifsmoke/assets/images/okey.png" alt="Okey">
                     <span class="description">Мы свяжемся с Вами в ближайшее время</span>
                 </div>
             </div>

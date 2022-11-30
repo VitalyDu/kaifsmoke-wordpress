@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package vapezone
+ * @package kaifsmoke
  */
 
 ?>
@@ -15,7 +15,7 @@
 
 	wp_link_pages(
 		array(
-			'before' => '<div class="page-links">' . esc_html__('Pages:', 'vapezone'),
+			'before' => '<div class="page-links">' . esc_html__('Pages:', 'kaifsmoke'),
 			'after'  => '</div>',
 		)
 	);

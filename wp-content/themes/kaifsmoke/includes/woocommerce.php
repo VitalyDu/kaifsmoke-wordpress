@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package vapezone
+ * @package kaifsmoke
  */
 
 /**
@@ -16,7 +16,7 @@
  *
  * @return void
  */
-function vapezone_woocommerce_setup() {
+function kaifsmoke_woocommerce_setup() {
 	add_theme_support(
 		'woocommerce',
 		array(
@@ -35,15 +35,15 @@ function vapezone_woocommerce_setup() {
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
-add_action( 'after_setup_theme', 'vapezone_woocommerce_setup' );
+add_action( 'after_setup_theme', 'kaifsmoke_woocommerce_setup' );
 
 /**
  * WooCommerce specific scripts & stylesheets.
  *
  * @return void
  */
-function vapezone_woocommerce_scripts() {
-	wp_enqueue_style( 'vapezone-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array());
+function kaifsmoke_woocommerce_scripts() {
+	wp_enqueue_style( 'kaifsmoke-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array());
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
@@ -57,9 +57,9 @@ function vapezone_woocommerce_scripts() {
 			font-style: normal;
 		}';
 
-	wp_add_inline_style( 'vapezone-woocommerce-style', $inline_font );
+	wp_add_inline_style( 'kaifsmoke-woocommerce-style', $inline_font );
 }
-add_action( 'wp_enqueue_scripts', 'vapezone_woocommerce_scripts' );
+add_action( 'wp_enqueue_scripts', 'kaifsmoke_woocommerce_scripts' );
 
 /**
  * Disable the default WooCommerce stylesheet.
@@ -77,12 +77,12 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
  * @param  array $classes CSS classes applied to the body tag.
  * @return array $classes modified to include 'woocommerce-active' class.
  */
-function vapezone_woocommerce_active_body_class( $classes ) {
+function kaifsmoke_woocommerce_active_body_class( $classes ) {
 	$classes[] = 'woocommerce-active';
 
 	return $classes;
 }
-add_filter( 'body_class', 'vapezone_woocommerce_active_body_class' );
+add_filter( 'body_class', 'kaifsmoke_woocommerce_active_body_class' );
 
 /**
  * Related Products Args.
@@ -90,7 +90,7 @@ add_filter( 'body_class', 'vapezone_woocommerce_active_body_class' );
  * @param array $args related products args.
  * @return array $args related products args.
  */
-function vapezone_woocommerce_related_products_args( $args ) {
+function kaifsmoke_woocommerce_related_products_args( $args ) {
 	$defaults = array(
 		'posts_per_page' => 3,
 		'columns'        => 3,
@@ -100,7 +100,7 @@ function vapezone_woocommerce_related_products_args( $args ) {
 
 	return $args;
 }
-add_filter( 'woocommerce_output_related_products_args', 'vapezone_woocommerce_related_products_args' );
+add_filter( 'woocommerce_output_related_products_args', 'kaifsmoke_woocommerce_related_products_args' );
 
 /**
  * Remove default WooCommerce wrapper.
@@ -108,7 +108,7 @@ add_filter( 'woocommerce_output_related_products_args', 'vapezone_woocommerce_re
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-if ( ! function_exists( 'vapezone_woocommerce_wrapper_before' ) ) {
+if ( ! function_exists( 'kaifsmoke_woocommerce_wrapper_before' ) ) {
 	/**
 	 * Before Content.
 	 *
@@ -116,15 +116,15 @@ if ( ! function_exists( 'vapezone_woocommerce_wrapper_before' ) ) {
 	 *
 	 * @return void
 	 */
-	function vapezone_woocommerce_wrapper_before() {
+	function kaifsmoke_woocommerce_wrapper_before() {
 		?>
 			<!-- <main id="primary" class="site-main"> -->
 		<?php
 	}
 }
-add_action( 'woocommerce_before_main_content', 'vapezone_woocommerce_wrapper_before' );
+add_action( 'woocommerce_before_main_content', 'kaifsmoke_woocommerce_wrapper_before' );
 
-if ( ! function_exists( 'vapezone_woocommerce_wrapper_after' ) ) {
+if ( ! function_exists( 'kaifsmoke_woocommerce_wrapper_after' ) ) {
 	/**
 	 * After Content.
 	 *
@@ -132,14 +132,14 @@ if ( ! function_exists( 'vapezone_woocommerce_wrapper_after' ) ) {
 	 *
 	 * @return void
 	 */
-	function vapezone_woocommerce_wrapper_after() {
+	function kaifsmoke_woocommerce_wrapper_after() {
 		?>
 			<!-- </main> -->
 			<!-- #main -->
 		<?php
 	}
 }
-add_action( 'woocommerce_after_main_content', 'vapezone_woocommerce_wrapper_after' );
+add_action( 'woocommerce_after_main_content', 'kaifsmoke_woocommerce_wrapper_after' );
 
 /**
  * Sample implementation of the WooCommerce Mini Cart.
@@ -147,13 +147,13 @@ add_action( 'woocommerce_after_main_content', 'vapezone_woocommerce_wrapper_afte
  * You can add the WooCommerce Mini Cart to header.php like so ...
  *
 	<?php
-		if ( function_exists( 'vapezone_woocommerce_header_cart' ) ) {
-			vapezone_woocommerce_header_cart();
+		if ( function_exists( 'kaifsmoke_woocommerce_header_cart' ) ) {
+			kaifsmoke_woocommerce_header_cart();
 		}
 	?>
  */
 
-if ( ! function_exists( 'vapezone_woocommerce_cart_link_fragment' ) ) {
+if ( ! function_exists( 'kaifsmoke_woocommerce_cart_link_fragment' ) ) {
 	/**
 	 * Cart Fragments.
 	 *
@@ -162,17 +162,17 @@ if ( ! function_exists( 'vapezone_woocommerce_cart_link_fragment' ) ) {
 	 * @param array $fragments Fragments to refresh via AJAX.
 	 * @return array Fragments to refresh via AJAX.
 	 */
-	function vapezone_woocommerce_cart_link_fragment( $fragments ) {
+	function kaifsmoke_woocommerce_cart_link_fragment( $fragments ) {
 		ob_start();
-		vapezone_woocommerce_cart_link();
+		kaifsmoke_woocommerce_cart_link();
 		$fragments['a.cart-contents'] = ob_get_clean();
 
 		return $fragments;
 	}
 }
-add_filter( 'woocommerce_add_to_cart_fragments', 'vapezone_woocommerce_cart_link_fragment' );
+add_filter( 'woocommerce_add_to_cart_fragments', 'kaifsmoke_woocommerce_cart_link_fragment' );
 
-if ( ! function_exists( 'vapezone_woocommerce_cart_link' ) ) {
+if ( ! function_exists( 'kaifsmoke_woocommerce_cart_link' ) ) {
 	/**
 	 * Cart Link.
 	 *
@@ -180,13 +180,13 @@ if ( ! function_exists( 'vapezone_woocommerce_cart_link' ) ) {
 	 *
 	 * @return void
 	 */
-	function vapezone_woocommerce_cart_link() {
+	function kaifsmoke_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'vapezone' ); ?>">
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'kaifsmoke' ); ?>">
 			<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'vapezone' ),
+				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'kaifsmoke' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>
@@ -196,13 +196,13 @@ if ( ! function_exists( 'vapezone_woocommerce_cart_link' ) ) {
 	}
 }
 
-if ( ! function_exists( 'vapezone_woocommerce_header_cart' ) ) {
+if ( ! function_exists( 'kaifsmoke_woocommerce_header_cart' ) ) {
 	/**
 	 * Display Header Cart.
 	 *
 	 * @return void
 	 */
-	function vapezone_woocommerce_header_cart() {
+	function kaifsmoke_woocommerce_header_cart() {
 		if ( is_cart() ) {
 			$class = 'current-menu-item';
 		} else {
@@ -211,7 +211,7 @@ if ( ! function_exists( 'vapezone_woocommerce_header_cart' ) ) {
 		?>
 		<ul id="site-header-cart" class="site-header-cart">
 			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php vapezone_woocommerce_cart_link(); ?>
+				<?php kaifsmoke_woocommerce_cart_link(); ?>
 			</li>
 			<li>
 				<?php

@@ -8,7 +8,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
         header('Location: /signin/');
     if (get_current_user_id() !== 0 && (in_array($_SERVER['REDIRECT_URL'], ['/signin/', '/signup/'])))
         header('Location: /my-account/');
-    if (in_array($_SERVER['REDIRECT_URL'], ['/product-category/', '/product-category/vape/', '/product-category/vape/catalog/']))
+    if (in_array($_SERVER['REDIRECT_URL'], ['/product-category/', '/product-category/vape/', '/product-category/vape/catalog/', '/product-category/vape-produkciya/']))
         header('Location: /catalog/');
 }
 ?>
@@ -44,6 +44,11 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                 (m[i].a = m[i].a || []).push(arguments)
             };
             m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
+                }
+            }
             k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
         })
         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
@@ -52,7 +57,8 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
             clickmap: true,
             trackLinks: true,
             accurateTrackBounce: true,
-            webvisor: true
+            webvisor: true,
+            ecommerce: "dataLayer"
         });
     </script>
     <noscript>
@@ -179,7 +185,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                     </div>
 
                     <span id="access">
-                        Сайт vapezone.ru использует cookie c целью повышения производительностии упрощения работы с сайтом, а также в аналитических целях. Продолжая работу с сайтом, вы соглашаетесь на использование файлов cookie.
+                        Сайт kaifsmoke.ru использует cookie c целью повышения производительностии упрощения работы с сайтом, а также в аналитических целях. Продолжая работу с сайтом, вы соглашаетесь на использование файлов cookie.
                     </span>
                 </div>
 
@@ -187,7 +193,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
         </div>
     </div>
 
-    <script src="/wp-content/themes/vapezone/assets/js/cookie.js"></script>
+    <script src="/wp-content/themes/kaifsmoke/assets/js/cookie.js"></script>
 
     <style>
         /* html {
@@ -497,7 +503,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                     ?>
                     <?php echo do_shortcode('[fibosearch]'); ?>
                 </div>
-                <a href="/" class="logo"><img src="/wp-content/themes/vapezone/assets/images/logo.png" alt="VapeZone"></a>
+                <a href="/" class="logo"><img src="/wp-content/themes/kaifsmoke/assets/images/logo.png" alt="kaifsmoke"></a>
                 <ul itemscope itemtype="https://schema.org/SiteNavigationElement" class="header_block__navigation">
                     <li class="navigation_shops"><a href="/shops/">Магазины</a></li>
                     <li class="navigation_more">
@@ -573,7 +579,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                                     <div class="navigation_profileDropdown__authorized">
                                         <div class="navigation_profileDropdownAuthorized__top">
                                             <div class="navigation_profileDropdownAuthorizedTop__icon">
-                                                <img src="/wp-content/themes/vapezone/assets/images/profileIcon.png" alt="Пользователь">
+                                                <img src="/wp-content/themes/kaifsmoke/assets/images/profileIcon.png" alt="Пользователь">
                                             </div>
                                             <div class="navigation_profileDropdownAuthorizedTop__nameBonuses">
                                                 <span class="navigation_profileDropdownAuthorizedTop__name"><? echo get_user_meta(get_current_user_id(), 'first_name', 1) ?> <? echo get_user_meta(get_current_user_id(), 'last_name', 1) ?>
@@ -630,11 +636,11 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
         <div class="container mobileHeader onlyMobile">
             <div class="mobileHeader_block">
                 <a itemprop="url" href="/" class="mobileHeader_block__logo">
-                    <img src="/wp-content/themes/vapezone/assets/images/icons/mobileFullLogo.png" alt="VapeZone">
+                    <img src="/wp-content/themes/kaifsmoke/assets/images/icons/mobileFullLogo.png" alt="kaifsmoke">
                 </a>
                 <div class="mobileHeader_block__logoSearchBurger">
                     <a itemprop="url" href="/" class="mobileHeaderFixed_block__logo">
-                        <img src="/wp-content/themes/vapezone/assets/images/icons/mobileLogo.png" alt="VapeZone">
+                        <img src="/wp-content/themes/kaifsmoke/assets/images/icons/mobileLogo.png" alt="kaifsmoke">
                     </a>
                     <div class="mobileHeader_block__search">
                         <!-- <input type="search" placeholder="Поиск"> -->
@@ -688,7 +694,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                                 </a>
                                 <?php if (!empty($menu_sub0['sub'])) { ?>
                                     <span class="dropdown_arrow">
-                                        <img src="/wp-content/themes/vapezone/assets/images/icons/mobileMenuHaveDropdown.png" alt="Открыть" />
+                                        <img src="/wp-content/themes/kaifsmoke/assets/images/icons/mobileMenuHaveDropdown.png" alt="Открыть" />
                                     </span>
                                     <ul class="mobileMenu_category__subcategoryList categoriesSubcategories_block">
                                         <div class="container">
@@ -706,7 +712,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                                                     <a href="<?= $menu_sub1['link'] ?>" class="mobileMenu_subcategoryList__subcategoryLink"><?= $menu_sub1['name'] ?></a>
                                                     <?php if (!empty($menu_sub1['sub'])) { ?>
                                                         <span class="dropdown_arrow">
-                                                            <img src="/wp-content/themes/vapezone/assets/images/icons/mobileMenuHaveDropdown.png" alt="Открыть" />
+                                                            <img src="/wp-content/themes/kaifsmoke/assets/images/icons/mobileMenuHaveDropdown.png" alt="Открыть" />
                                                         </span>
                                                         <ul class="mobileMenu_subsubcategoryList categoriesSubcategories_block">
                                                             <div class="container">
@@ -794,7 +800,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                     </div>
                     <div class="mobileMenuUser_iconNameBonuses">
                         <div class="mobileMenuUser_iconNameBonuses_icon">
-                            <img src="/wp-content/themes/vapezone/assets/images/icons/mobileMenuUserIcon.png" alt="Пользователь">
+                            <img src="/wp-content/themes/kaifsmoke/assets/images/icons/mobileMenuUserIcon.png" alt="Пользователь">
                         </div>
                         <div class="mobileMenuUser_iconNameBonuses_nameBonuses">
                             <span class="userName"><? echo get_user_meta(get_current_user_id(), 'first_name', 1) ?> <? echo get_user_meta(get_current_user_id(), 'last_name', 1) ?></span>

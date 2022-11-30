@@ -14,7 +14,7 @@ if (empty($orders['out']['orders'])) {
         <div class="container">
             <div class="answerPage_block">
                 <h1>Список заказов пуст</h1>
-                <img src="/wp-content/themes/vapezone/assets/images/icons/NotFoundHave.png" alt="">
+                <img src="/wp-content/themes/kaifsmoke/assets/images/icons/NotFoundHave.png" alt="">
                 <a class="onHomePage" href="/catalog">Перейти в каталог</a>
             </div>
         </div>

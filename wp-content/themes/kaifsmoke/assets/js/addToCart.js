@@ -184,7 +184,7 @@
 //                 <img src="${
 //                   this[key].image_url
 //                     ? this[key].image_url
-//                     : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
+//                     : "/wp-content/themes/kaifsmoke/assets/images/placeholder-image.png"
 //                 }" alt="${this[key].name}">
 //             </div>
 //             <div class="basketDropdown_product__description">
@@ -227,7 +227,7 @@
 //                     <img src="${
 //                       this[key].image_url
 //                         ? this[key].image_url
-//                         : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
+//                         : "/wp-content/themes/kaifsmoke/assets/images/placeholder-image.png"
 //                     }" alt="${this[key].name}">
 //                 </div>
 //                 <div class="productBlock_product__nameQuantityPrice">
@@ -588,7 +588,7 @@
 //                     <img src="${
 //                       this[key].image_url
 //                         ? this[key].image_url
-//                         : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
+//                         : "/wp-content/themes/kaifsmoke/assets/images/placeholder-image.png"
 //                     }" alt="${this[key].name}" />
 //                 </a>
 //                 <div class="product_namePrice">
@@ -664,7 +664,7 @@
 //                     <img src=${
 //                       this[key].image_url
 //                         ? this[key].image_url
-//                         : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
+//                         : "/wp-content/themes/kaifsmoke/assets/images/placeholder-image.png"
 //                     }" alt="${this[key].name}" />
 //                 </a>
 //                 <div class="product_namePrice">

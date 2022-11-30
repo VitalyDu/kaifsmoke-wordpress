@@ -1,12 +1,18 @@
 <?php
 
-add_action('wp_ajax_nopriv_print_catalog_main', ['VZCatalogMain', 'print']);
-add_action('wp_ajax_print_catalog_main', ['VZCatalogMain', 'print']);
-
-class VZCatalogMain
+class VZCatalogVirtual
 {
-    public static function print()
-    {
+    public static function getProducts($products) {
+        $out = array(
+            'status' => 'error',
+            'error_desc' => null,
+            'out' => null
+        );
+
+        if (empty($products)) {
+            $out['error_desc'] = 'Товаров не найдено.';
+            return $out;
+        }
         $page = 1;
         if (!empty($_GET['pagination'])) {
             $page = intval($_GET['pagination']);
@@ -16,35 +22,42 @@ class VZCatalogMain
         }
         $posts_per_page = 16;
         $offset = ($page - 1) * $posts_per_page;
-
-        echo '<div class="productsWrapper_block">';
-
         $posts = new WP_Query([
             'post_type' => 'product',
+            'post__in' => $products,
             'post_status' => 'publish',
             'posts_per_page' => $posts_per_page,
             'offset' => $offset,
-            'meta_query' => [
-                'relation' => 'AND',
-                'in_stock' => [
-                    'key' => 'in_stock',
-                ],
-            ],
-            'orderby' => [
-                'in_stock' => 'DESC',
-            ]
+            'orderby' => 'date',
+            'order' => 'DESC'
         ]);
+        $out['out']['max_pages'] = ceil($posts->found_posts / $posts_per_page);
+        $out['out']['page'] = $page;
+        $out['out']['products'] = $posts;
 
-        if ($posts->have_posts()) {
-            while ($posts->have_posts()) {
-                $posts->the_post();
+        $out['status'] = 'success';
+        return $out;
+    }
+
+    public static function print($products)
+    {
+        $result = self::getProducts($products);
+        if ($result['status'] == 'error') {
+            echo $result['error_desc'];
+            return true;
+        }
+        $products = $result['out']['products'];
+        $page = $result['out']['page'];
+        $max_pages = $result['out']['max_pages'];
+
+        echo '<div class="productsWrapper_block">';
+        if ($products->have_posts()) {
+            while ($products->have_posts()) {
+                $products->the_post();
                 include get_template_directory() . '/includes/components/product-minicard.php';
             }
         }
-
         echo '</div>';
-
-        $max_pages = ceil($posts->found_posts / $posts_per_page);
         self::printPagination($page, $max_pages);
 
         if (wp_doing_ajax()) {

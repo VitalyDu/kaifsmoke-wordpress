@@ -237,7 +237,6 @@ $(document).ready(function () {
           renderCart(productsData);
         }
       }
-
       var t = "";
       $("body").on("click", ".product_quantityPlus", function () {
         let product_name = $(this)
@@ -313,7 +312,6 @@ $(document).ready(function () {
       });
 
       $("body").on("input", ".product_quantity", function () {
-        let that = $(this);
         let product_name = $(this).attr("data-productName");
         let product_id = parseInt($(this).attr("data-productId"));
         let product_quantity = parseInt($(this).val());
@@ -325,7 +323,6 @@ $(document).ready(function () {
         }
         clearTimeout(t);
         t = setTimeout(function () {
-          that.blur();
           Cart.set_product_quantity(
             product_name,
             product_id,
@@ -338,31 +335,31 @@ $(document).ready(function () {
         }, 1000);
       });
 
-      // $("body").on("change", ".product_quantity", function () {
-      //   let product_name = $(this).attr("data-productName");
-      //   let product_id = parseInt($(this).attr("data-productId"));
-      //   let product_quantity = parseInt($(this).val());
-      //   let max_quantity = parseInt($(this).attr("max"));
-      //   let multisklad = $(this).attr("data-idMultiSklad");
-      //   let shopAddress = $(this).attr("data-shopAddress");
+      $("body").on("change", ".product_quantity", function () {
+        let product_name = $(this).attr("data-productName");
+        let product_id = parseInt($(this).attr("data-productId"));
+        let product_quantity = parseInt($(this).val());
+        let max_quantity = parseInt($(this).attr("max"));
+        let multisklad = $(this).attr("data-idMultiSklad");
+        let shopAddress = $(this).attr("data-shopAddress");
 
-      //   if (product_quantity < 1) {
-      //     product_quantity = 1;
-      //     $(this).val(product_quantity);
-      //   }
-      //   clearTimeout(t);
-      //   t = setTimeout(function () {
-      //     Cart.set_product_quantity(
-      //       product_name,
-      //       product_id,
-      //       product_quantity,
-      //       multisklad,
-      //       rerenderCart,
-      //       renderMapForCart
-      //     );
-      //     productTotalPrice(product_quantity, $(this));
-      //   }, 1000);
-      // });
+        if (product_quantity < 1) {
+          product_quantity = 1;
+          $(this).val(product_quantity);
+        }
+        clearTimeout(t);
+        t = setTimeout(function () {
+          Cart.set_product_quantity(
+            product_name,
+            product_id,
+            product_quantity,
+            multisklad,
+            rerenderCart,
+            renderMapForCart
+          );
+          productTotalPrice(product_quantity, $(this));
+        }, 1000);
+      });
 
       function productTotalPrice(quantity, element) {
         let product_priceField = element
@@ -380,15 +377,9 @@ $(document).ready(function () {
         product_priceField.attr("data-totalPrice", product_priceTotal);
       }
 
-      function rerenderCart(multisklad = null) {
-        if ($.cookie("multisklad")) {
-          $(`.table-item[data-idMultiSklad="${multisklad}"]`).addClass(
-            "active"
-          );
-          prom = Cart.get_cart_products($.cookie("multisklad"));
-        } else {
-          prom = Cart.get_data();
-        }
+      function rerenderCart(multisklad) {
+        $(`.table-item[data-idMultiSklad="${multisklad}"]`).addClass("active");
+        prom = Cart.get_cart_products(multisklad);
         prom.then((data) => setCart(data));
       }
 
@@ -419,7 +410,7 @@ $(document).ready(function () {
                       <img src="${
                         this[key].image_url
                           ? this[key].image_url
-                          : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
+                          : "/wp-content/themes/kaifsmoke/assets/images/placeholder-image.png"
                       }" alt="${this[key].name}" />
                   </a>
                   <div class="product_namePrice">
@@ -497,7 +488,7 @@ $(document).ready(function () {
                       <img src=${
                         this[key].image_url
                           ? this[key].image_url
-                          : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
+                          : "/wp-content/themes/kaifsmoke/assets/images/placeholder-image.png"
                       }" alt="${this[key].name}" />
                   </a>
                   <div class="product_namePrice">
@@ -582,7 +573,6 @@ $(document).ready(function () {
         } else if ($('.cartProduct[data-stockStatus="1"]').length) {
           $(".cartPage_block__order .deliveryTime .value").text("2 Дня");
         }
-        $(".loader").fadeOut();
       }
 
       function productStatus(in_chosen_shop_stock_status) {
@@ -788,6 +778,7 @@ class Cart {
     product,
     productName,
     id,
+    // updateCartModal = null,
     rerenderCart = null,
     renderMapForCart = null
   ) {
@@ -802,10 +793,10 @@ class Cart {
       },
       success: async (data) => {
         $(".loader").fadeOut();
-        if (rerenderCart && $(".cartPage_block__products").length) {
+        if (rerenderCart) {
           rerenderCart();
-          console.log("rerender cart check!");
         }
+        console.log("remove", renderMapForCart);
         if (renderMapForCart && $(".shops_reservation").length) {
           renderMapForCart();
         }
@@ -942,7 +933,6 @@ class Cart {
     rerenderCart,
     renderMapForCart
   ) {
-    $(".loader").css("display", "flex");
     $.ajax({
       url: AJAXURL,
       dataType: "json",
@@ -1048,7 +1038,7 @@ class Cart {
                     <img src="${
                       this[key].image_url
                         ? this[key].image_url
-                        : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
+                        : "/wp-content/themes/kaifsmoke/assets/images/placeholder-image.png"
                     }" alt="${this[key].name}">
                 </div>
                 <div class="basketDropdown_product__description">
@@ -1152,7 +1142,7 @@ class Cart {
                       <img src="${
                         this[key].image_url
                           ? this[key].image_url
-                          : "/wp-content/themes/vapezone/assets/images/placeholder-image.png"
+                          : "/wp-content/themes/kaifsmoke/assets/images/placeholder-image.png"
                       }" alt="${this[key].name}">
                   </div>
                   <div class="productBlock_product__nameQuantityPrice">

@@ -28,7 +28,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 <p><?php printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) ); ?></p>
 <?php /* translators: %s: Order number */ ?>
 <?php //printf( esc_html__( 'Just to let you know &mdash; we\'ve received your order #%s, and it is now being processed:', 'woocommerce' ), esc_html( $order->get_order_number() ) ); ?>
-    <p>Благодарим за оформленный заказ на сайте <a href="https://vapezone.ru/">vapezone.ru</a>. Наш оператор с вами свяжется в ближайшее время!</p>
+    <p>Благодарим за оформленный заказ на сайте <a href="https://kaifsmoke.ru/">kaifsmoke.ru</a>. Наш оператор с вами свяжется в ближайшее время!</p>
 
 <?php
 

@@ -23,7 +23,7 @@ get_header();
     <div class="container">
         <div class="advantages_block">
             <div class="advantages_block__advantage">
-                <div class="advantage_icon"><img src="/wp-content/themes/vapezone/assets/images/icons/deliveryCar.png" alt="Доставка"></div>
+                <div class="advantage_icon"><img src="/wp-content/themes/kaifsmoke/assets/images/icons/deliveryCar.png" alt="Доставка"></div>
                 <div class="advantage_title">Бесплатная доставка</div>
                 <div class="advantage_description">по Санкт-Петербургу</div>
                 <div class="advantage_fullDescription">
@@ -31,7 +31,7 @@ get_header();
                 </div>
             </div>
             <div class="advantages_block__advantage">
-                <div class="advantage_icon"><img src="/wp-content/themes/vapezone/assets/images/icons/card.png" alt="Оплата"></div>
+                <div class="advantage_icon"><img src="/wp-content/themes/kaifsmoke/assets/images/icons/card.png" alt="Оплата"></div>
                 <div class="advantage_title">Заказывайте</div>
                 <div class="advantage_description">без предоплаты</div>
                 <div class="advantage_fullDescription">
@@ -39,7 +39,7 @@ get_header();
                 </div>
             </div>
             <div class="advantages_block__advantage">
-                <div class="advantage_icon"><img src="/wp-content/themes/vapezone/assets/images/icons/shop.png" alt="Магазин"></div>
+                <div class="advantage_icon"><img src="/wp-content/themes/kaifsmoke/assets/images/icons/shop.png" alt="Магазин"></div>
                 <div class="advantage_title">Нас знают</div>
                 <div class="advantage_description">и нам доверяют</div>
                 <div class="advantage_fullDescription">
@@ -47,7 +47,7 @@ get_header();
                 </div>
             </div>
             <div class="advantages_block__advantage">
-                <div class="advantage_icon"><img src="/wp-content/themes/vapezone/assets/images/icons/garancy.png" alt="Гарантия"></div>
+                <div class="advantage_icon"><img src="/wp-content/themes/kaifsmoke/assets/images/icons/garancy.png" alt="Гарантия"></div>
                 <div class="advantage_title">Гарантия</div>
                 <div class="advantage_description">качества</div>
                 <div class="advantage_fullDescription">
@@ -62,7 +62,7 @@ get_header();
     <div class="container">
         <div class="optDescription_block">
             <p>Вы можете заказать у нас одноразовые электронные сигареты и устройства оптом на сайте <b><a target="_blank" href="https://ruvape.ru">ruvape.ru</a></b></p>
-            <p>С нами можно связаться по почте opt@vapezone.pro и телефону: 8 (812) 509-28-55</p>
+            <p>С нами можно связаться по почте opt@kaifsmoke.pro и телефону: 8 (812) 509-28-55</p>
         </div>
     </div>
 </section>
@@ -99,7 +99,7 @@ get_header();
     </div>
     <div class="form_sent">
         <span class="label">Отправлено!</span>
-        <img src="/wp-content/themes/vapezone/assets/images/okey.png" alt="Okey">
+        <img src="/wp-content/themes/kaifsmoke/assets/images/okey.png" alt="Okey">
         <span class="description">Мы свяжемся с Вами в ближайшее время</span>
     </div>
 </div>

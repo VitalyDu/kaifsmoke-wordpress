@@ -89,7 +89,7 @@ $(document).ready(function () {
   //   myMap.geoObjects.add(objectManager);
 
   //   $.ajax({
-  //     url: "https://vapezone.ru/wp-json/controllers/v1/shops/",
+  //     url: "https://kaifsmoke.ru/wp-json/controllers/v1/shops/",
   //   }).done(function (data) {
   //     const readyConst = JSON.stringify(data);
   //     objectManager.add(readyConst);
@@ -988,8 +988,8 @@ $(document).ready(function () {
     margin: 10,
     nav: true,
     navText: [
-      `<img src="/wp-content/themes/vapezone/assets/images/productsSliderArrow.png" alt="Влево" class="sliderArrowNotActive">`,
-      `<img src="/wp-content/themes/vapezone/assets/images/productsSliderArrow.png" alt="Вправо" class="sliderArrowNotActive">`,
+      `<img src="/wp-content/themes/kaifsmoke/assets/images/productsSliderArrow.png" alt="Влево" class="sliderArrowNotActive">`,
+      `<img src="/wp-content/themes/kaifsmoke/assets/images/productsSliderArrow.png" alt="Вправо" class="sliderArrowNotActive">`,
     ],
     responsive: {
       0: {
