@@ -503,7 +503,7 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                     ?>
                     <?php echo do_shortcode('[fibosearch]'); ?>
                 </div>
-                <a href="/" class="logo"><img src="/wp-content/themes/kaifsmoke/assets/images/logo.png" alt="kaifsmoke"></a>
+                <a href="/" class="logo"><img src="/wp-content/themes/kaifsmoke/assets/images/Logo.svg" alt="kaifsmoke"></a>
                 <ul itemscope itemtype="https://schema.org/SiteNavigationElement" class="header_block__navigation">
                     <li class="navigation_shops"><a href="/shops/">Магазины</a></li>
                     <li class="navigation_more">

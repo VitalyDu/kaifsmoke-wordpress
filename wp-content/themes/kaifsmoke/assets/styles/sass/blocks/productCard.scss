@@ -373,30 +373,12 @@
         background-position: center;
         border-radius: 5px;
         position: relative;
-        &:nth-of-type(1) {
-          background: url("../images/backgrounds/advan1.png");
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-        &:nth-of-type(2) {
-          background: url("../images/backgrounds/advan2.png");
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-        &:nth-of-type(3) {
-          background: url("../images/backgrounds/advan3.png");
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-        &:nth-of-type(4) {
-          background: url("../images/backgrounds/advan4.png");
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
+        background: #fafafa;
         .advantage_icon {
           width: 24px;
           height: auto;
           transition: 0.2s all linear;
+          filter: invert(1);
         }
         .advantage_title {
           font-style: normal;
@@ -411,7 +393,7 @@
           font-weight: 500;
           font-size: 14px;
           line-height: 17px;
-          color: $colorLight;
+          color: $colorDark;
           transition: 0.2s all linear;
         }
         .advantage_fullDescription {
@@ -428,7 +410,7 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 17px;
-            color: $colorLight;
+            color: $colorDark;
           }
         }
         &:hover {
@@ -1659,31 +1641,11 @@
           width: 100%;
           min-height: 95px;
           padding: 15px;
-          background: #000;
+          background: $colorDark;
           border-radius: 5px;
           margin-bottom: 20px;
           &:last-of-type {
             margin-bottom: 0;
-          }
-          &:nth-of-type(1) {
-            background: url("../images/backgrounds/advan1.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-          &:nth-of-type(2) {
-            background: url("../images/backgrounds/advan2.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-          &:nth-of-type(3) {
-            background: url("../images/backgrounds/advan3.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-          &:nth-of-type(4) {
-            background: url("../images/backgrounds/advan4.png");
-            background-size: cover;
-            background-repeat: no-repeat;
           }
           .advantage_icon {
             width: 24px;
@@ -1704,7 +1666,7 @@
               font-weight: 500;
               font-size: 14px;
               line-height: 17px;
-              color: $colorLight;
+              color: $colorDark;
             }
           }
         }
