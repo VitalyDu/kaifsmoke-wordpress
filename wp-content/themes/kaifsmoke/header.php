@@ -636,11 +636,11 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
         <div class="container mobileHeader onlyMobile">
             <div class="mobileHeader_block">
                 <a itemprop="url" href="/" class="mobileHeader_block__logo">
-                    <img src="/wp-content/themes/kaifsmoke/assets/images/icons/mobileFullLogo.png" alt="kaifsmoke">
+                    <img src="/wp-content/themes/kaifsmoke/assets/images/Logo.svg" alt="kaifsmoke">
                 </a>
                 <div class="mobileHeader_block__logoSearchBurger">
                     <a itemprop="url" href="/" class="mobileHeaderFixed_block__logo">
-                        <img src="/wp-content/themes/kaifsmoke/assets/images/icons/mobileLogo.png" alt="kaifsmoke">
+                        <img src="/wp-content/themes/kaifsmoke/assets/images/Logo.svg" alt="kaifsmoke">
                     </a>
                     <div class="mobileHeader_block__search">
                         <!-- <input type="search" placeholder="Поиск"> -->
@@ -666,18 +666,18 @@ if (!empty($_SERVER['REDIRECT_URL'])) {
                 <div class="mobileMenu_block__icons">
                     <a itemprop="url" class="mobileMenu_favoritesIcon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.1998 8.61987C19.1998 12.2199 11.9998 18.7314 11.9998 18.7314C11.9998 18.7314 4.7998 12.2199 4.7998 8.61987C4.7998 4.69111 9.5998 3.16234 11.9998 7.0911C14.3998 3.16234 19.1998 5.01987 19.1998 8.61987Z" stroke="white" />
+                            <path d="M19.1998 8.61987C19.1998 12.2199 11.9998 18.7314 11.9998 18.7314C11.9998 18.7314 4.7998 12.2199 4.7998 8.61987C4.7998 4.69111 9.5998 3.16234 11.9998 7.0911C14.3998 3.16234 19.1998 5.01987 19.1998 8.61987Z" stroke="#000000" />
                         </svg>
                     </a>
                     <a itemprop="url" class="mobileMenu_userIcon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8Z" stroke="white" />
-                            <path d="M12 13C8.68629 13 6 15.6863 6 19H18C18 15.6863 15.3137 13 12 13Z" stroke="white" />
+                            <path d="M15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8Z" stroke="#000000" />
+                            <path d="M12 13C8.68629 13 6 15.6863 6 19H18C18 15.6863 15.3137 13 12 13Z" stroke="#000000" />
                         </svg>
                     </a>
                     <a itemprop="url" class="mobileMenu_basketIcon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.4002 15H18.0002L19.2002 7.19998H7.2002L8.4002 15ZM8.4002 15L6.6002 3.59998H1.2002M11.4002 18.6C11.4002 19.5941 10.5943 20.4 9.6002 20.4C8.60608 20.4 7.8002 19.5941 7.8002 18.6C7.8002 17.6059 8.60608 16.8 9.6002 16.8C10.5943 16.8 11.4002 17.6059 11.4002 18.6ZM18.6002 18.6C18.6002 19.5941 17.7943 20.4 16.8002 20.4C15.8061 20.4 15.0002 19.5941 15.0002 18.6C15.0002 17.6059 15.8061 16.8 16.8002 16.8C17.7943 16.8 18.6002 17.6059 18.6002 18.6Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.4002 15H18.0002L19.2002 7.19998H7.2002L8.4002 15ZM8.4002 15L6.6002 3.59998H1.2002M11.4002 18.6C11.4002 19.5941 10.5943 20.4 9.6002 20.4C8.60608 20.4 7.8002 19.5941 7.8002 18.6C7.8002 17.6059 8.60608 16.8 9.6002 16.8C10.5943 16.8 11.4002 17.6059 11.4002 18.6ZM18.6002 18.6C18.6002 19.5941 17.7943 20.4 16.8002 20.4C15.8061 20.4 15.0002 19.5941 15.0002 18.6C15.0002 17.6059 15.8061 16.8 16.8002 16.8C17.7943 16.8 18.6002 17.6059 18.6002 18.6Z" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
                 </div>

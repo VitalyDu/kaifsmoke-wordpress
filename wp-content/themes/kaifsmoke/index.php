@@ -11,7 +11,6 @@ get_header();
                 <div class="promo_block__carousel owl-carousel owl-theme">
                     <?php while (has_sub_field('main_slider', 'option')) : ?>
                         <div class="carousel_item" style="background: url('<?php the_sub_field('image'); ?>'); background-size: cover; background-position: center;">
-                            <div class="carousel_item__gradient"></div>
                             <div class="carousel_item__content">
                                 <span class="carousel_title"><?php the_sub_field('title'); ?></span>
                                 <span class="carousel_subtitle"><?php the_sub_field('subtitle'); ?></span>
@@ -211,7 +210,6 @@ get_header();
                 <div class="noveltyBanners_block__carousel owl-carousel owl-theme">
                     <?php while (has_sub_field('inner_slider', 'option')) : ?>
                         <div class="carousel_item" style="background: url('<?php the_sub_field('image'); ?>'); background-size: cover; background-position: center;">
-                            <div class="carousel_item__gradient"></div>
                             <div class="carousel_item__content">
                                 <span class="carousel_title"><?php the_sub_field('title'); ?></span>
                                 <span class="carousel_subtitle"><?php the_sub_field('subtitle'); ?></span>
